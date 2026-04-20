@@ -97,9 +97,68 @@
 }
 
 @media (max-width: 992px) {
-  .sidebar { width: 100vw; left: -100vw; padding: 5rem 0; }
-  .sidebar.open { left: 0; }
-  .mobile-toggle { display: flex; }
-  .nav-label { font-size: 1.1rem; }
-  .nav-links li a { flex-direction: row; gap: 2rem; }
+  .sidebar { 
+    width: 280px; 
+    left: -280px; 
+    padding: 6rem 0; 
+    background: white;
+    box-shadow: 20px 0 50px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar.open { 
+    left: 0; 
+  }
+
+  .mobile-toggle { 
+    display: flex; 
+  }
+  
+  .nav-label { 
+    font-size: 1rem; 
+    letter-spacing: 2px;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding-left: 2.5rem;
+    width: 100%;
+  }
+
+  .nav-links li a { 
+    flex-direction: row; 
+    gap: 1.5rem; 
+  }
+
+  .nav-logo {
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 25, 55, 0.3);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .sidebar.open .nav-backdrop {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Specific optimizations for small mobiles */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 85vw;
+    left: -85vw;
+  }
 }

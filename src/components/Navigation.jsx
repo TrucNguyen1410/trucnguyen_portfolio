@@ -39,6 +39,7 @@ const Navigation = () => {
       </button>
 
       <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <div className="nav-backdrop" onClick={() => setIsOpen(false)}></div>
         <div className="nav-logo">
           <div className="logo-circle">T</div>
           <span className="logo-text">TRUC</span>

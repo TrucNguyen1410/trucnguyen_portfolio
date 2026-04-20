@@ -38,6 +38,7 @@ body {
   color: var(--color-text);
   overflow-x: hidden;
   line-height: 1.6;
+  width: 100%;
 }
 
 h1, h2, h3, h4, .heading {
@@ -77,6 +78,12 @@ ul {
   padding: 0 2rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
 .section {
   padding: 8rem 0;
 }
@@ -95,6 +102,14 @@ ul {
   font-size: 3.5rem;
   margin-bottom: 3.5rem;
   color: var(--color-text);
+}
+
+@media (max-width: 992px) {
+  .section-title { font-size: 2.8rem; margin-bottom: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .section-title { font-size: 2.2rem; margin-bottom: 2rem; }
 }
 
 .highlight {

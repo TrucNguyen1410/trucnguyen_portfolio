@@ -291,9 +291,25 @@
   .projects-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 }
 
+@media (max-width: 1100px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 992px) {
-  .projects-section { padding-left: 0; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .modal-body { grid-template-columns: 1fr; padding: 2rem; }
+  .projects-section { padding-left: 2rem; padding-right: 2rem; padding-top: 6rem; }
+}
+
+@media (max-width: 768px) {
+  .projects-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .modal-body { grid-template-columns: 1fr; padding: 2rem 1.5rem; gap: 2rem; }
   .modal-text h2 { font-size: 1.8rem; }
+  .modal-content { width: 98%; border-radius: 30px; }
+  .tech-tag { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+  .p-desc { font-size: 1rem; margin-bottom: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .projects-section { padding: 6rem 1rem; }
+  .modal-close { top: 15px; right: 15px; width: 40px; height: 40px; }
+  .modal-text h2 { font-size: 1.5rem; }
 }

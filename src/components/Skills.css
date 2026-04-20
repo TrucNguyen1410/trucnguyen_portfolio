@@ -85,5 +85,26 @@
 }
 
 @media (max-width: 992px) {
-  .skills-section { padding-left: 0; }
+  .skills-section { padding-left: 0; padding-top: 6rem; }
+  .skills-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem;
+  }
+  .skill-category {
+    padding: 2.5rem 1.5rem;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid { 
+    grid-template-columns: 1fr; 
+  }
+  .skill-category {
+    padding: 2rem 1.5rem;
+    min-height: auto;
+  }
+  .skill-category h3 {
+    font-size: 1.3rem;
+  }
 }
