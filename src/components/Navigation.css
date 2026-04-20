@@ -1,0 +1,105 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100vh;
+  background: white;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+  z-index: 1000;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.02);
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 255, 0.2);
+}
+
+.logo-text {
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: var(--color-primary);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.nav-links li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7a94b4;
+  transition: all 0.3s ease;
+}
+
+.nav-label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+  color: var(--color-primary);
+}
+
+.nav-links li a.active .nav-icon {
+  transform: scale(1.25);
+  filter: drop-shadow(0 0 5px rgba(0,0,255,0.2));
+}
+
+.nav-icon {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mobile-toggle {
+  display: none;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 2000;
+  background: var(--color-primary);
+  border: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 255, 0.2);
+}
+
+@media (max-width: 992px) {
+  .sidebar { width: 100vw; left: -100vw; padding: 5rem 0; }
+  .sidebar.open { left: 0; }
+  .mobile-toggle { display: flex; }
+  .nav-label { font-size: 1.1rem; }
+  .nav-links li a { flex-direction: row; gap: 2rem; }
+}

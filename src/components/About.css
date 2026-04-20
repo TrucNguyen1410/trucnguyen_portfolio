@@ -1,0 +1,103 @@
+.about-section {
+  padding-left: 100px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1;
+  background: white;
+  border-radius: 40px;
+  border: 4px solid white;
+  box-shadow: 0 40px 100px rgba(0, 0, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.about-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.about-img-wrapper:hover .about-main-img {
+  transform: scale(1.08);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--color-primary);
+  padding: 1.5rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 255, 0.3);
+  color: white;
+}
+
+.experience-badge .years {
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+
+.experience-badge .text {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.info-list {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-item .label {
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.info-item .val {
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+  .about-section { padding-left: 0; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-image { max-width: 400px; margin: 0 auto; }
+}
