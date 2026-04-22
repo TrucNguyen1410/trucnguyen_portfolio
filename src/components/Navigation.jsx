@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, User, Code, Briefcase, Mail, Menu, X } from 'lucide-react';
+import { Home, User, Code, Briefcase, Mail, Menu, X, Award } from 'lucide-react';
 import './Navigation.css';
 
 const Navigation = () => {
@@ -10,13 +10,14 @@ const Navigation = () => {
     { id: 'home', icon: <Home size={20} />, label: 'Home' },
     { id: 'about', icon: <User size={20} />, label: 'About' },
     { id: 'skills', icon: <Code size={20} />, label: 'Skills' },
+    { id: 'certificates', icon: <Award size={20} />, label: 'Certs' },
     { id: 'projects', icon: <Briefcase size={20} />, label: 'Projects' },
     { id: 'contact', icon: <Mail size={20} />, label: 'Contact' },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      const sections = ['home', 'about', 'skills', 'certificates', 'projects', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {

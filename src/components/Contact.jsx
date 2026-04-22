@@ -32,6 +32,8 @@ const Contact = () => {
                   <span className="c-label">{info.label}</span>
                   <span className="c-value">{info.value}</span>
                 </div>
+                <div className="status-dot"></div>
+                <div className="card-shine"></div>
               </a>
             ))}
           </motion.div>

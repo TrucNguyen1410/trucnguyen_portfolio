@@ -8,6 +8,8 @@ import Contact from './components/Contact';
 import SmoothScroll from './components/SmoothScroll';
 import CustomCursor from './components/CustomCursor';
 
+import Certificates from './components/Certificates';
+
 function App() {
   return (
     <SmoothScroll>
@@ -18,6 +20,7 @@ function App() {
           <Hero />
           <About />
           <Skills />
+          <Certificates />
           <Projects />
           <Contact />
         </main>

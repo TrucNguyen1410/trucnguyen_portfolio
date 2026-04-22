@@ -20,20 +20,67 @@
   align-items: center;
   text-align: center;
   gap: 1.2rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.3); /* Liquid Glass Effect */
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   padding: 2.5rem 1.5rem;
-  border-radius: 24px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  min-height: 220px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  min-height: 240px;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  background: white;
   border-color: var(--color-primary);
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 255, 0.08);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 255, 0.12),
+    0 10px 20px rgba(0, 0, 255, 0.05);
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 12px;
+  height: 12px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+
+.contact-card:hover .status-dot {
+  transform: translateX(-50%) scale(1);
+}
+
+.card-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.contact-card:hover .card-shine {
+  transform: translateX(100%) translateY(100%) rotate(45deg);
 }
 
 .contact-icon {
