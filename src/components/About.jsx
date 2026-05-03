@@ -16,7 +16,7 @@ const About = () => {
           >
             <div className="experience-badge">
               <span className="years">HCMUNRE</span>
-              <span className="text">1150080078</span>
+              <span className="text">Khóa 11</span>
             </div>
             <div className="about-img-wrapper">
               <img
