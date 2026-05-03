@@ -1,18 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useScroll } from 'framer-motion';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, Globe } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import './Projects.css';
 
 const projectList = [
   {
     id: 1,
-    title: "Shopee Recommender System",
-    category: "Machine Learning & Data",
-    desc: "Hệ thống gợi ý sản phẩm thông minh ứng dụng Machine Learning để tối ưu hóa trải nghiệm người dùng dựa trên dữ liệu từ Shopee.",
-    tech: ["Python", "Machine Learning", "Data Analysis"],
-    github: "https://github.com/TrucNguyen1410/Shopee-Recommender-System",
-    images: ["1.1.png", "1.2.png", "1.3.png", "1.4.png", "1.5.png", "1.6.png", "1.7.png"]
+    title: "Analytic Hierarchy Process (AHP)",
+    category: "AI & Machine Learning",
+    desc: "Hệ thống hỗ trợ ra quyết định chọn mua laptop thông minh ứng dụng thuật toán Analytic Hierarchy Process (AHP) kết hợp AI.",
+    tech: ["Python", "AHP Algorithm", "PostgreSQL", "Machine Learning"],
+    github: "https://github.com/TrucNguyen1410/Analytic-Hierarchy-Process",
+    demo: "https://analytic-hierarchy-process-one.vercel.app/",
+    images: ["1.1.png", "1.2.png", "1.3.png", "1.4.png", "1.5.png"]
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const projectList = [
     desc: "Nền tảng thương mại điện tử chuyên biệt dành cho các sản phẩm văn hóa, nghệ thuật (tranh, tượng, v.v.).",
     tech: ["Web Fullstack", "RESTful API", "Database Management"],
     github: "https://github.com/TrucNguyen1410/art-shop-fullstack",
+    demo: "https://art-shop-fullstack-chatbot.vercel.app/",
     images: ["2.1.png", "2.2.png", "2.3.png", "2.4.png", "2.5.png", "2.6.png", "2.7.png", "2.12.png", "2.13.png", "2.14.png"]
   },
   {
@@ -30,6 +32,7 @@ const projectList = [
     desc: "Ứng dụng di động giúp người dùng dễ dàng quản lý thông tin và hồ sơ sức khỏe y tế.",
     tech: ["Flutter", "MongoDB"],
     github: "https://github.com/TrucNguyen1410/health_handbook_app",
+    demo: "https://healthbook-53606.web.app/",
     images: ["3.1.png", "3.2.png", "3.3.png", "3.4.png"]
   },
   {
@@ -81,9 +84,9 @@ const TiltCard = ({ project, onClick, index }) => {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.95 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      y: 0,
       scale: 1,
       transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: index * 0.15 }
     }
@@ -146,15 +149,15 @@ const Projects = () => {
   };
 
   return (
-    <motion.section 
-      id="projects" 
-      className="projects-section" 
+    <motion.section
+      id="projects"
+      className="projects-section"
       ref={containerRef}
       style={{ backgroundColor: bgColor }}
     >
       <div className="container">
         <div style={{ overflow: "hidden" }}>
-          <motion.span 
+          <motion.span
             className="subheading"
             initial="hidden"
             whileInView="visible"
@@ -165,7 +168,7 @@ const Projects = () => {
           </motion.span>
         </div>
         <div style={{ overflow: "hidden", marginTop: "-5px" }}>
-          <motion.h2 
+          <motion.h2
             className="section-title"
             initial="hidden"
             whileInView="visible"
@@ -179,11 +182,11 @@ const Projects = () => {
         {/* Project Grid with Staggered Reveal */}
         <div className="projects-grid">
           {projectList.map((project, idx) => (
-            <TiltCard 
-              key={project.id} 
-              project={project} 
+            <TiltCard
+              key={project.id}
+              project={project}
               index={idx}
-              onClick={() => setSelectedProject(project)} 
+              onClick={() => setSelectedProject(project)}
             />
           ))}
         </div>
@@ -192,9 +195,9 @@ const Projects = () => {
       {/* Modal Detail View */}
       <AnimatePresence>
         {selectedProject && (
-          <ProjectModal 
-            project={selectedProject} 
-            onClose={() => setSelectedProject(null)} 
+          <ProjectModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
           />
         )}
       </AnimatePresence>
@@ -224,14 +227,14 @@ const ProjectModal = ({ project, onClose }) => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="modal-backdrop"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={onClose}
     >
-      <motion.div 
+      <motion.div
         className="modal-content"
         initial={{ scale: 0.9, opacity: 0, y: 50 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -262,11 +265,11 @@ const ProjectModal = ({ project, onClose }) => {
               <button className="modal-nav prev" onClick={() => paginate(-1)}><ChevronLeft size={24} /></button>
               <button className="modal-nav next" onClick={() => paginate(1)}><ChevronRight size={24} /></button>
             </div>
-            
+
             <div className="modal-thumbnails">
               {project.images.map((img, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className={`modal-thumb-item ${idx === imgIndex ? 'active' : ''}`}
                   onClick={() => {
                     setDirection(idx > imgIndex ? 1 : -1);
@@ -284,12 +287,17 @@ const ProjectModal = ({ project, onClose }) => {
             <span className="p-cat">{project.category}</span>
             <h2>{project.title}</h2>
             <p className="p-desc">{project.desc}</p>
-            
+
             <div className="p-tech-labels">
               {project.tech.map((t, idx) => <span key={idx} className="tech-tag">{t}</span>)}
             </div>
 
-            <div className="modal-footer">
+            <div className="modal-footer" style={{ display: 'flex', gap: '10px' }}>
+              {project.demo && (
+                <a href={project.demo} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ backgroundColor: '#00d2ff', borderColor: '#00d2ff' }}>
+                  <Globe size={20} /> XEM WEB DEMO
+                </a>
+              )}
               <a href={project.github} target="_blank" rel="noreferrer" className="btn btn-primary">
                 <FaGithub size={20} /> XEM REPOSITORY
               </a>
