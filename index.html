@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- IMPORTANT: replace SITE_URL with your real deployed domain (used for absolute OG/Twitter image URLs) -->
-    <link rel="canonical" href="https://truc-portfolio.vercel.app/" />
+    <!-- __SITE_URL__ is auto-filled at build time from Vercel's domain (see vite.config.js) -->
+    <link rel="canonical" href="__SITE_URL__/" />
 
     <!-- Hreflang: the app reads ?lang= so these URLs load the matching language -->
-    <link rel="alternate" hreflang="vi" href="https://truc-portfolio.vercel.app/?lang=vi" />
-    <link rel="alternate" hreflang="en" href="https://truc-portfolio.vercel.app/?lang=en" />
-    <link rel="alternate" hreflang="x-default" href="https://truc-portfolio.vercel.app/" />
+    <link rel="alternate" hreflang="vi" href="__SITE_URL__/?lang=vi" />
+    <link rel="alternate" hreflang="en" href="__SITE_URL__/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="__SITE_URL__/" />
 
     <title>Nguyễn Lê Anh Trúc | Software Engineer & Full-stack Developer</title>
     <meta name="description" content="Portfolio của Nguyễn Lê Anh Trúc - Software Engineer chuyên Mobile, Web & AI Integration. Khám phá dự án, kỹ năng và chứng chỉ. Tải CV (VI/EN)." />
@@ -28,8 +28,8 @@
     <meta property="og:site_name" content="Nguyễn Lê Anh Trúc — Portfolio" />
     <meta property="og:title" content="Nguyễn Lê Anh Trúc | Software Engineer & Full-stack Developer" />
     <meta property="og:description" content="Software Engineer chuyên Mobile, Web & AI Integration. Khám phá dự án, kỹ năng và chứng chỉ." />
-    <meta property="og:url" content="https://truc-portfolio.vercel.app/" />
-    <meta property="og:image" content="https://truc-portfolio.vercel.app/og-image.png" />
+    <meta property="og:url" content="__SITE_URL__/" />
+    <meta property="og:image" content="__SITE_URL__/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Portfolio của Nguyễn Lê Anh Trúc" />
@@ -40,7 +40,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Nguyễn Lê Anh Trúc | Software Engineer & Full-stack Developer" />
     <meta name="twitter:description" content="Software Engineer chuyên Mobile, Web & AI Integration. Khám phá dự án, kỹ năng và chứng chỉ." />
-    <meta name="twitter:image" content="https://truc-portfolio.vercel.app/og-image.png" />
+    <meta name="twitter:image" content="__SITE_URL__/og-image.png" />
   </head>
   <body>
     <div id="root"></div>
