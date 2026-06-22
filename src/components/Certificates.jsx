@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, ExternalLink, BrainCircuit, Globe, Cloud, Cpu, Zap, BookOpen } from 'lucide-react';
 import { SiGooglecloud, SiAnthropic, SiGoogle } from 'react-icons/si';
+import { useSite } from '../context/SiteContext';
 import './Certificates.css';
 
 const certificateData = [
@@ -66,6 +67,7 @@ const certificateData = [
 ];
 
 const Certificates = () => {
+  const { t } = useSite();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -90,7 +92,7 @@ const Certificates = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          ACCREDITATIONS
+          {t.certificates.subheading}
         </motion.span>
         <motion.h2 
           className="section-title"
@@ -99,7 +101,7 @@ const Certificates = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          Chứng Chỉ <span className="highlight">& Đào Tạo</span>
+          {t.certificates.titleLine} <span className="highlight">{t.certificates.titleHighlight}</span>
         </motion.h2>
 
         {certificateData.map((group, gIndex) => (
@@ -110,7 +112,7 @@ const Certificates = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              {group.category}
+              {t.certificates.groups[group.category] || group.category}
             </motion.h3>
             
             <motion.div 
@@ -138,7 +140,7 @@ const Certificates = () => {
                       rel="noopener noreferrer" 
                       className="verify-btn"
                     >
-                      <span>Xác minh</span>
+                      <span>{t.certificates.verify}</span>
                       <ExternalLink size={14} />
                     </a>
                   </div>

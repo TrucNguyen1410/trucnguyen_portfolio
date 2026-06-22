@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { useSite } from '../context/SiteContext';
 import './Hero.css';
 
 const Hero = () => {
+  const { t } = useSite();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -44,7 +46,7 @@ const Hero = () => {
                 animate="visible"
                 variants={titleVariants}
               >
-                Software Engineer
+                {t.hero.role}
               </motion.span>
             </div>
             
@@ -55,7 +57,7 @@ const Hero = () => {
                 animate="visible"
                 variants={titleVariants}
               >
-                Nguyễn Lê Anh <span className="highlight">Trúc</span>
+                {t.hero.nameFirst}<span className="highlight">{t.hero.nameHighlight}</span>
               </motion.h1>
             </div>
 
@@ -65,7 +67,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Full-stack Developer chuyên phát triển Mobile & Web App hiện đại, kết hợp sức mạnh của AI để giải quyết các bài toán thực tế hiệu quả.
+              {t.hero.description}
             </motion.p>
             <motion.div 
               className="hero-btns"
@@ -73,8 +75,8 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
-              <a href="#projects" className="btn btn-primary">XEM DỰ ÁN</a>
-              <a href="#contact" className="btn btn-outline">KẾT NỐI</a>
+              <a href="#projects" className="btn btn-primary">{t.hero.btnProjects}</a>
+              <a href="#contact" className="btn btn-outline">{t.hero.btnConnect}</a>
             </motion.div>
           </motion.div>
 
@@ -87,8 +89,8 @@ const Hero = () => {
           >
             <div className="image-frame">
               <img 
-                src="/assets/profile.png" 
-                alt="Nguyễn Lê Anh Trúc" 
+                src="/assets/profile.webp"
+                alt="Nguyễn Lê Anh Trúc"
                 className="profile-img" 
                 onError={(e) => {
                   e.target.src = "https://via.placeholder.com/600x800/050505/ffffff?text=NGUYEN+LE+ANH+TRUC";
@@ -102,7 +104,7 @@ const Hero = () => {
       
       <div className="scroll-indicator">
         <div className="mouse"></div>
-        <span>SCROLL</span>
+        <span>{t.hero.scroll}</span>
       </div>
     </section>
   );

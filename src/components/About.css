@@ -16,11 +16,11 @@
 .about-img-wrapper {
   width: 100%;
   aspect-ratio: 1;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--surface-glass);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 40px;
-  border: 4px solid rgba(255, 255, 255, 0.5);
+  border: 4px solid var(--glass-edge-soft);
   box-shadow: 0 40px 100px rgba(0, 0, 255, 0.1);
   overflow: hidden;
   position: relative;

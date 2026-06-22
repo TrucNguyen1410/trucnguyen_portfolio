@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useSite } from '../context/SiteContext';
 import './About.css';
 
 const About = () => {
+  const { t } = useSite();
   return (
     <section id="about" className="about-section">
       <div className="container">
@@ -15,12 +17,12 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="experience-badge">
-              <span className="years">HCMUNRE</span>
-              <span className="text">Khóa 11</span>
+              <span className="years">{t.about.badgeYears}</span>
+              <span className="text">{t.about.badgeText}</span>
             </div>
             <div className="about-img-wrapper">
               <img
-                src="/assets/hcmunre.jpg"
+                src="/assets/hcmunre.webp"
                 alt="HCMUNRE Official"
                 className="about-main-img"
               />
@@ -34,29 +36,29 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="subheading">GIỚI THIỆU</span>
+            <span className="subheading">{t.about.subheading}</span>
             <h2 className="section-title">
-              Nghiên Cứu & <br />
-              <span className="highlight">Phát Triển</span>
+              {t.about.titleLine1} <br />
+              <span className="highlight">{t.about.titleHighlight}</span>
             </h2>
             <p className="about-text">
-              Tôi là một Software Engineer trẻ đam mê sự kết hợp giữa Mobile, Web và AI Integration.
+              {t.about.p1}
             </p>
             <p className="about-text">
-              Dự án của tôi thường xoay quanh việc biến các thuật toán AI phức tạp thành những ứng dụng gần gũi thông qua giao diện Flutter hoặc hệ thống Web Full-stack. Từ những Chatbot thông minh đến các hệ thống quản lý chuyên sâu, tôi tin rằng công nghệ chỉ thực sự có giá trị khi nó mang lại trải nghiệm tiện lợi và thông minh cho người dùng.
+              {t.about.p2}
             </p>
 
             <div className="info-list">
               <div className="info-item">
-                <span className="label">Học vấn:</span>
-                <span className="val">Kỹ thuật Phần mềm</span>
+                <span className="label">{t.about.infoEducationLabel}</span>
+                <span className="val">{t.about.infoEducationValue}</span>
               </div>
               <div className="info-item">
-                <span className="label">Đam mê:</span>
-                <span className="val">Web, Mobile & AI</span>
+                <span className="label">{t.about.infoPassionLabel}</span>
+                <span className="val">{t.about.infoPassionValue}</span>
               </div>
               <div className="info-item">
-                <span className="label">Email:</span>
+                <span className="label">{t.about.infoEmailLabel}</span>
                 <span className="val">truc141004@gmail.com</span>
               </div>
             </div>

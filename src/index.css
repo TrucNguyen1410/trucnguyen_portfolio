@@ -17,9 +17,40 @@
   --glass-border: rgba(255, 255, 255, 0.6);
   --glass-blur: 10px;
 
+  /* Semantic surfaces (themeable) */
+  --surface-glass: rgba(255, 255, 255, 0.3);
+  --surface-glass-soft: rgba(255, 255, 255, 0.25);
+  --surface-glass-strong: rgba(255, 255, 255, 0.8);
+  --glass-edge: rgba(255, 255, 255, 0.4);
+  --glass-edge-soft: rgba(255, 255, 255, 0.5);
+  --surface-solid: #ffffff;
+  --surface-tint: #f8fbff;
+
   /* Typography */
   --font-main: 'Outfit', sans-serif;
   --font-heading: 'Montserrat', sans-serif;
+}
+
+/* Dark theme overrides */
+[data-theme='dark'] {
+  --color-primary: #5cc6ee;
+  --color-secondary: #4d7cff;
+  --color-bg: #070b16;
+  --color-bg-alt: #0e1424;
+  --color-text: #eaf1ff;
+  --color-text-muted: #9aabce;
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.14);
+
+  --surface-glass: rgba(255, 255, 255, 0.06);
+  --surface-glass-soft: rgba(255, 255, 255, 0.05);
+  --surface-glass-strong: rgba(255, 255, 255, 0.12);
+  --glass-edge: rgba(255, 255, 255, 0.12);
+  --glass-edge-soft: rgba(255, 255, 255, 0.14);
+  --surface-solid: #131a2c;
+  --surface-tint: #0e1424;
 }
 
 * {
@@ -39,6 +70,7 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   width: 100%;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 h1, h2, h3, h4, .heading {
@@ -153,4 +185,29 @@ ul {
   background: var(--color-primary);
   color: white;
   transform: translateY(-5px);
+}
+
+/* When the sidebar is collapsed (desktop), sections reclaim the offset space */
+@media (min-width: 993px) {
+  .hero-section,
+  .about-section,
+  .skills-section,
+  .certificates-section,
+  .contact-section,
+  .projects-section {
+    transition: padding-left 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .app[data-nav='collapsed'] .hero-section,
+  .app[data-nav='collapsed'] .about-section,
+  .app[data-nav='collapsed'] .skills-section,
+  .app[data-nav='collapsed'] .certificates-section,
+  .app[data-nav='collapsed'] .contact-section,
+  .app[data-nav='collapsed'] .projects-section {
+    padding-left: 2rem;
+  }
+
+  .app[data-nav='collapsed'] .scroll-indicator {
+    left: 2rem;
+  }
 }

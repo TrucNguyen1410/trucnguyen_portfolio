@@ -2,7 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useScroll } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X, Globe } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
+import { useSite } from '../context/SiteContext';
 import './Projects.css';
+
+// Project images are stored as .png filenames; serve the optimized .webp.
+const asset = (name) => `/assets/${name.replace(/\.png$/, '.webp')}`;
 
 const projectList = [
   {
@@ -55,7 +59,7 @@ const projectList = [
   }
 ];
 
-const TiltCard = ({ project, onClick, index }) => {
+const TiltCard = ({ project, onClick, index, t }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -111,23 +115,24 @@ const TiltCard = ({ project, onClick, index }) => {
       <div className="card-accent-top"></div>
       <div className="card-image" style={{ transform: "translateZ(40px)" }}>
         <img
-          src={`/assets/${project.images[0]}`}
+          src={asset(project.images[0])}
           alt={project.title}
           onError={(e) => { e.target.src = "https://via.placeholder.com/600x400?text=" + project.title }}
         />
         <div className="card-overlay">
-          <span>XEM CHI TIẾT</span>
+          <span>{t.projects.viewDetail}</span>
         </div>
       </div>
       <div className="card-info" style={{ transform: "translateZ(25px)" }}>
         <h3>{project.title}</h3>
-        <span className="card-cat">{project.category}</span>
+        <span className="card-cat">{t.projects.categories[project.id]}</span>
       </div>
     </motion.div>
   );
 };
 
 const Projects = () => {
+  const { t, theme } = useSite();
   const [selectedProject, setSelectedProject] = useState(null);
   const containerRef = useRef(null);
 
@@ -136,12 +141,11 @@ const Projects = () => {
     offset: ["start end", "end start"]
   });
 
-  // Hiệu ứng đổi màu nền nhẹ nhàng theo Obsidian Style
-  const bgColor = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    ["#a1def5", "#bde8f8", "#a1def5"]
-  );
+  // Subtle scroll-driven background shift, theme-aware.
+  const palette = theme === 'dark'
+    ? ["#070b16", "#0c1426", "#070b16"]
+    : ["#a1def5", "#bde8f8", "#a1def5"];
+  const bgColor = useTransform(scrollYProgress, [0, 0.5, 1], palette);
 
   const titleVariants = {
     hidden: { y: "100%" },
@@ -164,7 +168,7 @@ const Projects = () => {
             viewport={{ once: true }}
             variants={titleVariants}
           >
-            DANH MỤC SẢN PHẨM
+            {t.projects.subheading}
           </motion.span>
         </div>
         <div style={{ overflow: "hidden", marginTop: "-5px" }}>
@@ -175,7 +179,7 @@ const Projects = () => {
             viewport={{ once: true }}
             variants={titleVariants}
           >
-            Dự Án <span className="highlight">Nổi Bật</span>
+            {t.projects.titleLine} <span className="highlight">{t.projects.titleHighlight}</span>
           </motion.h2>
         </div>
 
@@ -186,6 +190,7 @@ const Projects = () => {
               key={project.id}
               project={project}
               index={idx}
+              t={t}
               onClick={() => setSelectedProject(project)}
             />
           ))}
@@ -197,6 +202,7 @@ const Projects = () => {
         {selectedProject && (
           <ProjectModal
             project={selectedProject}
+            t={t}
             onClose={() => setSelectedProject(null)}
           />
         )}
@@ -205,7 +211,7 @@ const Projects = () => {
   );
 };
 
-const ProjectModal = ({ project, onClose }) => {
+const ProjectModal = ({ project, onClose, t }) => {
   const [imgIndex, setImgIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
@@ -251,7 +257,7 @@ const ProjectModal = ({ project, onClose }) => {
               <AnimatePresence initial={false} custom={direction} mode="wait">
                 <motion.img
                   key={imgIndex}
-                  src={`/assets/${project.images[imgIndex]}`}
+                  src={asset(project.images[imgIndex])}
                   custom={direction}
                   variants={slideVariants}
                   initial="enter"
@@ -276,7 +282,7 @@ const ProjectModal = ({ project, onClose }) => {
                     setImgIndex(idx);
                   }}
                 >
-                  <img src={`/assets/${img}`} alt="" onError={(e) => e.target.style.display = 'none'} />
+                  <img src={asset(img)} alt="" onError={(e) => e.target.style.display = 'none'} />
                 </div>
               ))}
             </div>
@@ -284,9 +290,9 @@ const ProjectModal = ({ project, onClose }) => {
 
           {/* Project Content */}
           <div className="modal-text">
-            <span className="p-cat">{project.category}</span>
+            <span className="p-cat">{t.projects.categories[project.id]}</span>
             <h2>{project.title}</h2>
-            <p className="p-desc">{project.desc}</p>
+            <p className="p-desc">{t.projects.descriptions[project.id]}</p>
 
             <div className="p-tech-labels">
               {project.tech.map((t, idx) => <span key={idx} className="tech-tag">{t}</span>)}
@@ -295,11 +301,11 @@ const ProjectModal = ({ project, onClose }) => {
             <div className="modal-footer" style={{ display: 'flex', gap: '10px' }}>
               {project.demo && (
                 <a href={project.demo} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ backgroundColor: '#00d2ff', borderColor: '#00d2ff' }}>
-                  <Globe size={20} /> XEM WEB DEMO
+                  <Globe size={20} /> {t.projects.viewDemo}
                 </a>
               )}
               <a href={project.github} target="_blank" rel="noreferrer" className="btn btn-primary">
-                <FaGithub size={20} /> XEM REPOSITORY
+                <FaGithub size={20} /> {t.projects.viewRepo}
               </a>
             </div>
           </div>

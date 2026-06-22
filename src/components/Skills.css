@@ -10,10 +10,10 @@
 }
 
 .skill-category {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--surface-glass);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--glass-edge);
   padding: 3.5rem 2rem;
   border-radius: 35px;
   position: relative;
@@ -29,7 +29,7 @@
 
 .skill-category:hover {
   transform: translateY(-12px) scale(1.02);
-  background: white;
+  background: var(--surface-solid);
   border-color: var(--color-primary);
   box-shadow: 
     0 30px 60px rgba(0, 0, 255, 0.12),

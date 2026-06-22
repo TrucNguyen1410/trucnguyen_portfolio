@@ -2,9 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Smartphone, Database, BrainCircuit } from 'lucide-react';
 import { FaFigma } from 'react-icons/fa';
+import { useSite } from '../context/SiteContext';
 import './Skills.css';
 
 const Skills = () => {
+  const { t } = useSite();
   const skillCategories = [
     {
       title: "Mobile & Desktop",
@@ -46,8 +48,8 @@ const Skills = () => {
   return (
     <section id="skills" className="skills-section">
       <div className="container">
-        <span className="subheading">CHUYÊN MÔN</span>
-        <h2 className="section-title">Kỹ Năng <span className="highlight">Công Nghệ</span></h2>
+        <span className="subheading">{t.skills.subheading}</span>
+        <h2 className="section-title">{t.skills.titleLine} <span className="highlight">{t.skills.titleHighlight}</span></h2>
 
         <motion.div 
           className="skills-grid"

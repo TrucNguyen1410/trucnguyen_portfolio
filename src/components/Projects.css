@@ -15,10 +15,10 @@
 }
 
 .project-card-v2 {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--surface-glass);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--glass-edge);
   border-radius: 35px;
   overflow: hidden;
   cursor: pointer;
@@ -34,7 +34,7 @@
 
 .project-card-v2:hover {
   transform: translateY(-12px) scale(1.02);
-  background: white;
+  background: var(--surface-solid);
   border-color: var(--color-primary);
   box-shadow: 
     0 30px 60px rgba(0, 0, 255, 0.12),
@@ -62,7 +62,7 @@
   aspect-ratio: 16/18;
   position: relative;
   overflow: hidden;
-  background: #f8fbff;
+  background: var(--surface-tint);
   border-radius: 20px;
   margin: 10px;
 }
@@ -123,7 +123,7 @@
 }
 
 .modal-content {
-  background: white;
+  background: var(--surface-solid);
   width: 95%;
   max-width: 1100px;
   max-height: 90vh;
@@ -176,7 +176,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16/10;
-  background: #f8fbff;
+  background: var(--surface-tint);
   border-radius: 25px;
   overflow: hidden;
   margin-bottom: 1.5rem;
@@ -194,7 +194,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--surface-glass-strong);
   backdrop-filter: blur(10px);
   border: none;
   width: 50px;
@@ -286,7 +286,7 @@
 }
 
 .tech-tag {
-  background: #f0f7ff;
+  background: var(--surface-tint);
   color: var(--color-primary);
   padding: 0.5rem 1rem;
   border-radius: 50px;
