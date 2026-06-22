@@ -1,6 +1,6 @@
 .certificates-section {
   padding-left: 100px; /* Offset for sidebar */
-  background: var(--color-bg);
+  background: transparent;
   position: relative;
   overflow: hidden;
 }

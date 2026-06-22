@@ -1,0 +1,170 @@
+.cosmic-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cosmic-stars {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== Nebula clouds ===== */
+.nebula {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.nebula-1 {
+  width: 46vw;
+  height: 46vw;
+  top: -8vh;
+  left: -6vw;
+  background: radial-gradient(circle, rgba(120, 70, 220, 0.7), transparent 70%);
+  animation: nebula-drift-a 26s ease-in-out infinite alternate;
+}
+
+.nebula-2 {
+  width: 52vw;
+  height: 52vw;
+  top: 38%;
+  right: -12vw;
+  background: radial-gradient(circle, rgba(40, 120, 200, 0.6), transparent 70%);
+  animation: nebula-drift-b 32s ease-in-out infinite alternate;
+}
+
+.nebula-3 {
+  width: 40vw;
+  height: 40vw;
+  bottom: -10vh;
+  left: 20%;
+  background: radial-gradient(circle, rgba(180, 50, 160, 0.5), transparent 70%);
+  animation: nebula-drift-a 38s ease-in-out infinite alternate;
+}
+
+@keyframes nebula-drift-a {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(4vw, 5vh, 0) scale(1.12); }
+}
+
+@keyframes nebula-drift-b {
+  from { transform: translate3d(0, 0, 0) scale(1.05); }
+  to { transform: translate3d(-5vw, -4vh, 0) scale(1); }
+}
+
+/* ===== Planets ===== */
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.planet-1 {
+  width: 130px;
+  height: 130px;
+  top: 16vh;
+  right: 8vw;
+  background: radial-gradient(circle at 32% 28%, #ffd9a3, #d8763b 55%, #7a3416 100%);
+  box-shadow: inset -10px -10px 26px rgba(0, 0, 0, 0.55), 0 0 50px rgba(216, 118, 59, 0.35);
+}
+
+.planet-2 {
+  width: 72px;
+  height: 72px;
+  top: 60vh;
+  left: 5vw;
+  background: radial-gradient(circle at 34% 30%, #b6e3ff, #4a8fd0 55%, #1b3f6e 100%);
+  box-shadow: inset -7px -7px 18px rgba(0, 0, 0, 0.5), 0 0 36px rgba(74, 143, 208, 0.35);
+}
+
+.planet-3 {
+  width: 110px;
+  height: 110px;
+  top: 68vh;
+  right: 8vw;
+  background: radial-gradient(circle at 35% 30%, #d8c5ff, #8a5bd6 55%, #432a78 100%);
+  box-shadow: inset -9px -9px 22px rgba(0, 0, 0, 0.5), 0 0 44px rgba(138, 91, 214, 0.4);
+}
+
+.planet-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 60px;
+  border: 4px solid rgba(216, 197, 255, 0.55);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-24deg);
+  box-shadow: 0 0 18px rgba(138, 91, 214, 0.35);
+}
+
+.planet-4 {
+  width: 54px;
+  height: 54px;
+  top: 24vh;
+  left: 11vw;
+  background: radial-gradient(circle at 34% 30%, #aef6e4, #34b89a 55%, #145c4c 100%);
+  box-shadow: inset -6px -6px 14px rgba(0, 0, 0, 0.5), 0 0 30px rgba(52, 184, 154, 0.35);
+}
+
+/* ===== Spaceship ===== */
+.spaceship {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 104px;
+  height: 52px;
+  will-change: transform;
+  filter: drop-shadow(0 0 14px rgba(92, 198, 238, 0.5));
+}
+
+.ship-b svg {
+  transform: scaleX(-1);
+}
+
+.ship-thrust {
+  transform-origin: center;
+  animation: thrust-pulse 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes thrust-pulse {
+  from { opacity: 0.55; transform: scaleX(0.85); }
+  to { opacity: 1; transform: scaleX(1.15); }
+}
+
+/* Lighter theme: keep cosmic subtle so the bright sky stays clean */
+[data-theme='light'] .nebula {
+  opacity: 0.28;
+}
+
+[data-theme='light'] .planet {
+  opacity: 0.5;
+}
+
+[data-theme='light'] .spaceship {
+  opacity: 0.7;
+}
+
+/* Smaller screens: trim the largest decorations */
+@media (max-width: 768px) {
+  .planet-1 { width: 90px; height: 90px; }
+  .planet-3 { width: 80px; height: 80px; }
+  .planet-ring { width: 150px; height: 46px; }
+  .spaceship { width: 78px; height: 40px; }
+  .nebula { filter: blur(60px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nebula,
+  .ship-thrust {
+    animation: none;
+  }
+}

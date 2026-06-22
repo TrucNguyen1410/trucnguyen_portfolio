@@ -15,10 +15,11 @@ const getInitialLang = () => {
 };
 
 const getInitialTheme = () => {
-  if (typeof window === 'undefined') return 'light';
+  if (typeof window === 'undefined') return 'dark';
   const saved = localStorage.getItem('theme');
   if (saved === 'light' || saved === 'dark') return saved;
-  return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  // Cosmic theme is the primary identity → default to dark space.
+  return 'dark';
 };
 
 const getInitialNavCollapsed = () => {

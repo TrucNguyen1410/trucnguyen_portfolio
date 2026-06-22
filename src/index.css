@@ -25,6 +25,7 @@
   --glass-edge-soft: rgba(255, 255, 255, 0.5);
   --surface-solid: #ffffff;
   --surface-tint: #f8fbff;
+  --space-gradient: none;
 
   /* Typography */
   --font-main: 'Outfit', sans-serif;
@@ -35,8 +36,13 @@
 [data-theme='dark'] {
   --color-primary: #5cc6ee;
   --color-secondary: #4d7cff;
-  --color-bg: #070b16;
+  --color-bg: #03060f;
   --color-bg-alt: #0e1424;
+  --space-gradient:
+    radial-gradient(circle at 15% 0%, rgba(70, 40, 130, 0.45), transparent 45%),
+    radial-gradient(circle at 85% 18%, rgba(20, 80, 150, 0.38), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(95, 35, 135, 0.4), transparent 55%),
+    linear-gradient(180deg, #03060f 0%, #050310 60%, #02040c 100%);
   --color-text: #eaf1ff;
   --color-text-muted: #9aabce;
   --color-border: rgba(255, 255, 255, 0.08);
@@ -66,11 +72,26 @@ html {
 body {
   font-family: var(--font-main);
   background-color: var(--color-bg);
+  background-image: var(--space-gradient);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--color-text);
   overflow-x: hidden;
   line-height: 1.6;
   width: 100%;
   transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Cosmic layering: background canvas sits behind, content above */
+.app {
+  position: relative;
+  z-index: 1;
+}
+
+.app main {
+  position: relative;
+  z-index: 1;
 }
 
 h1, h2, h3, h4, .heading {

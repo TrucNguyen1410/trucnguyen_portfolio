@@ -10,6 +10,7 @@ import SmoothScroll from './components/SmoothScroll';
 import CustomCursor from './components/CustomCursor';
 import ScrollProgress from './components/ScrollProgress';
 import BackToTop from './components/BackToTop';
+import CosmicBackground from './components/CosmicBackground';
 import Certificates from './components/Certificates';
 import { useSite } from './context/SiteContext';
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <SmoothScroll>
       <div className="app" data-nav={navCollapsed ? 'collapsed' : 'expanded'}>
+        <CosmicBackground />
         <ScrollProgress />
         <CustomCursor />
         <Navigation />

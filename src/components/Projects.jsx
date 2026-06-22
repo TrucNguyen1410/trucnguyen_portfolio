@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useScroll } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X, Globe } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import { useSite } from '../context/SiteContext';
@@ -132,20 +132,8 @@ const TiltCard = ({ project, onClick, index, t }) => {
 };
 
 const Projects = () => {
-  const { t, theme } = useSite();
+  const { t } = useSite();
   const [selectedProject, setSelectedProject] = useState(null);
-  const containerRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
-
-  // Subtle scroll-driven background shift, theme-aware.
-  const palette = theme === 'dark'
-    ? ["#070b16", "#0c1426", "#070b16"]
-    : ["#a1def5", "#bde8f8", "#a1def5"];
-  const bgColor = useTransform(scrollYProgress, [0, 0.5, 1], palette);
 
   const titleVariants = {
     hidden: { y: "100%" },
@@ -156,8 +144,6 @@ const Projects = () => {
     <motion.section
       id="projects"
       className="projects-section"
-      ref={containerRef}
-      style={{ backgroundColor: bgColor }}
     >
       <div className="container">
         <div style={{ overflow: "hidden" }}>
