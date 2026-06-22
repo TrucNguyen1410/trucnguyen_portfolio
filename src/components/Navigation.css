@@ -121,45 +121,62 @@
 }
 
 @media (max-width: 992px) {
-  .sidebar { 
-    width: 280px; 
-    left: -280px; 
-    padding: 6rem 0; 
+  .sidebar {
+    width: 280px;
+    left: -280px;
+    padding: 5rem 0 2.5rem;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     background: var(--surface-glass-strong); /* Slightly more opaque for mobile readability */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 20px 0 50px rgba(0, 0, 0, 0.1);
     border-right: 1px solid var(--glass-edge-soft);
   }
-  
-  .sidebar.open { 
-    left: 0; 
+
+  .sidebar.open {
+    left: 0;
   }
 
-  .mobile-toggle { 
-    display: flex; 
+  .mobile-toggle {
+    display: flex;
   }
-  
-  .nav-label { 
-    font-size: 1rem; 
+
+  .nav-label {
+    font-size: 1rem;
     letter-spacing: 2px;
+    white-space: normal;
   }
-  
+
   .nav-links {
-    gap: 1.5rem;
-    align-items: flex-start;
-    padding-left: 2.5rem;
+    gap: 0.6rem;
+    align-items: stretch;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     width: 100%;
   }
 
-  .nav-links li a { 
-    flex-direction: row; 
-    gap: 1.5rem; 
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.3rem;
+    width: 100%;
+    height: auto;
+    padding: 0.9rem 1.2rem;
+    border-radius: 14px;
   }
 
   .nav-logo {
     padding-left: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
   }
 
   .nav-backdrop {
@@ -382,10 +399,16 @@
 
 /* Mobile: roomier, left-aligned controls */
 @media (max-width: 992px) {
+  .nav-footer {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
   .nav-controls {
     align-items: flex-start;
-    padding: 0 2.5rem;
+    padding: 1.25rem 1.5rem 0;
     gap: 1rem;
+    border-top: 1px solid var(--glass-edge);
   }
 
   .theme-toggle {
@@ -408,11 +431,12 @@
     justify-content: flex-start;
   }
 
-  /* On mobile the sidebar is wide: open the menu below the trigger */
+  /* Open the menu above the trigger so it stays inside the scrollable drawer */
   .cv-menu {
-    bottom: auto;
-    top: calc(100% + 8px);
+    bottom: calc(100% + 8px);
+    top: auto;
     left: 0;
+    transform: none;
     min-width: 100%;
   }
 }
