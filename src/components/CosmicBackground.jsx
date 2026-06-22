@@ -33,11 +33,9 @@ const CosmicBackground = () => {
   const canvasRef = useRef(null);
   const { scrollYProgress } = useScroll();
 
-  // Planet parallax (hooks must be unconditional & fixed in count)
-  const p1y = useTransform(scrollYProgress, [0, 1], [0, -280]);
-  const p2y = useTransform(scrollYProgress, [0, 1], [0, 220]);
-  const p3y = useTransform(scrollYProgress, [0, 1], [0, -180]);
-  const p4y = useTransform(scrollYProgress, [0, 1], [0, 340]);
+  // Solar-system parallax: drifts up and tilts slightly as you scroll
+  const sysY = useTransform(scrollYProgress, [0, 1], [40, -260]);
+  const sysRotate = useTransform(scrollYProgress, [0, 1], [0, 35]);
 
   // Spaceship fly-bys mapped to scroll progress
   const shipAx = useTransform(scrollYProgress, [0.08, 0.42], ['-18vw', '118vw']);
@@ -163,12 +161,28 @@ const CosmicBackground = () => {
       <div className="nebula nebula-2" />
       <div className="nebula nebula-3" />
 
-      <motion.div className="planet planet-1" style={{ y: p1y }} />
-      <motion.div className="planet planet-2" style={{ y: p2y }} />
-      <motion.div className="planet planet-3" style={{ y: p3y }}>
-        <span className="planet-ring" />
+      <motion.div className="solar-system" style={{ y: sysY, rotate: sysRotate }}>
+        <div className="solar-disc">
+          <div className="sun" />
+          <div className="orbit orbit-1">
+            <div className="orbit-spin"><span className="sys-planet sp-1" /></div>
+          </div>
+          <div className="orbit orbit-2">
+            <div className="orbit-spin"><span className="sys-planet sp-2" /></div>
+          </div>
+          <div className="orbit orbit-3">
+            <div className="orbit-spin">
+              <span className="sys-planet sp-3"><span className="sp-ring" /></span>
+            </div>
+          </div>
+          <div className="orbit orbit-4">
+            <div className="orbit-spin"><span className="sys-planet sp-4" /></div>
+          </div>
+          <div className="orbit orbit-5">
+            <div className="orbit-spin"><span className="sys-planet sp-5" /></div>
+          </div>
+        </div>
       </motion.div>
-      <motion.div className="planet planet-4" style={{ y: p4y }} />
 
       <motion.div className="spaceship ship-a" style={{ x: shipAx, y: shipAy }}>
         <Ship />
