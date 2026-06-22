@@ -136,7 +136,7 @@ const Navigation = () => {
                   >
                     <a
                       href="/cv-vi.pdf"
-                      download="Nguyen-Le-Anh-Truc-CV-VI.pdf"
+                      download="Nguyen_Le_Anh_Truc_CV_VI.pdf"
                       onClick={() => setCvOpen(false)}
                     >
                       <span className="cv-flag">VI</span>
@@ -144,7 +144,7 @@ const Navigation = () => {
                     </a>
                     <a
                       href="/cv-en.pdf"
-                      download="Nguyen-Le-Anh-Truc-CV-EN.pdf"
+                      download="Nguyen_Le_Anh_Truc_CV_EN.pdf"
                       onClick={() => setCvOpen(false)}
                     >
                       <span className="cv-flag">EN</span>
