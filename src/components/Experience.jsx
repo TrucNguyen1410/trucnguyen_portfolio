@@ -4,6 +4,11 @@ import { Building2, Briefcase, ExternalLink } from 'lucide-react';
 import { useSite } from '../context/SiteContext';
 import './Experience.css';
 
+const LOGOS = {
+  'Athena Studio': '/assets/logo-athena.webp',
+  'Automation Land': '/assets/logo-automationland.webp',
+};
+
 const Experience = () => {
   const { t } = useSite();
 
@@ -34,9 +39,15 @@ const Experience = () => {
           {t.experience.items.map((item, i) => (
             <motion.article key={i} className="exp-card" variants={itemVariants}>
               <div className="exp-card-top">
-                <div className="exp-icon">
-                  <Building2 size={26} />
-                </div>
+                {LOGOS[item.company] ? (
+                  <div className="exp-logo-chip">
+                    <img src={LOGOS[item.company]} alt={`${item.company} logo`} />
+                  </div>
+                ) : (
+                  <div className="exp-icon">
+                    <Building2 size={26} />
+                  </div>
+                )}
                 {item.current && <span className="exp-current">{t.experience.currentLabel}</span>}
               </div>
 

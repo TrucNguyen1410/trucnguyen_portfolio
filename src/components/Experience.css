@@ -49,6 +49,26 @@
   box-shadow: 0 8px 22px rgba(92, 198, 238, 0.3);
 }
 
+.exp-logo-chip {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  flex-shrink: 0;
+}
+
+.exp-logo-chip img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .exp-current {
   font-size: 0.62rem;
   font-weight: 800;
