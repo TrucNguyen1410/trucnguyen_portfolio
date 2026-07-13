@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Send } from 'lucide-react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import { useSite } from '../context/SiteContext';
 import './Contact.css';
 
@@ -12,6 +12,7 @@ const Contact = () => {
     { icon: <Phone />, label: t.contact.labelPhone, value: "0338493544", link: "tel:0338493544" },
     { icon: <FaLinkedin />, label: t.contact.labelLinkedIn, value: "Anh Trúc Nguyễn Lê", link: "https://www.linkedin.com/in/tr%C3%BAc-nguy%E1%BB%85n-l%C3%AA-anh-912ab9285/" },
     { icon: <FaGithub />, label: t.contact.labelGitHub, value: "TrucNguyen1410", link: "https://github.com/TrucNguyen1410" },
+    { icon: <FaFacebook />, label: t.contact.labelFacebook, value: "Trúc Nguyễn", link: "https://www.facebook.com/trucnguyenneee1410" },
   ];
 
   return (
