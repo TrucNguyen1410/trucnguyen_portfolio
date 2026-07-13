@@ -41,8 +41,6 @@ export const translations = {
       badgeText: 'Khóa 11',
       objective:
         'Là sinh viên Kỹ thuật Phần mềm đam mê nơi giao thoa giữa Mobile, Web và AI, tôi luôn tìm cách biến công nghệ phức tạp thành sản phẩm hữu ích cho người dùng thật. Qua các vai trò thực tập về Flutter và Prompt Engineering, tôi học được cách làm việc trong đội ngũ đa chức năng và đưa ý tưởng từ bản vẽ đến khi ra mắt. Mục tiêu của tôi là được phát triển trong một môi trường kỹ thuật tầm cỡ — học hỏi từ những kỹ sư giỏi nhất và tạo ra tác động ở quy mô lớn.',
-      p1: 'Tôi là một Software Engineer trẻ đam mê sự kết hợp giữa Mobile, Web và AI Integration.',
-      p2: 'Dự án của tôi thường xoay quanh việc biến các thuật toán AI phức tạp thành những ứng dụng gần gũi thông qua giao diện Flutter hoặc hệ thống Web Full-stack. Từ những Chatbot thông minh đến các hệ thống quản lý chuyên sâu, tôi tin rằng công nghệ chỉ thực sự có giá trị khi nó mang lại trải nghiệm tiện lợi và thông minh cho người dùng.',
       infoEducationLabel: 'Học vấn:',
       infoEducationValue: 'Kỹ thuật Phần mềm',
       infoPassionLabel: 'Đam mê:',
@@ -190,8 +188,6 @@ export const translations = {
       badgeText: 'Class 11',
       objective:
         "I'm a Software Engineering student passionate about the intersection of Mobile, Web and AI, driven to turn complex technology into products that genuinely help people. Through internships in Flutter development and Prompt Engineering, I've learned to collaborate across cross-functional teams and ship ideas from concept to launch. My goal is to grow within a world-class engineering environment — learning from the best and creating impact at scale.",
-      p1: 'I am a young Software Engineer passionate about the intersection of Mobile, Web and AI Integration.',
-      p2: 'My projects revolve around turning complex AI algorithms into approachable applications through Flutter interfaces or full-stack web systems. From intelligent chatbots to in-depth management systems, I believe technology is only truly valuable when it delivers a convenient and smart experience for users.',
       infoEducationLabel: 'Education:',
       infoEducationValue: 'Software Engineering',
       infoPassionLabel: 'Passion:',

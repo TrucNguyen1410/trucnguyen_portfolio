@@ -44,12 +44,6 @@ const About = () => {
             <p className="about-objective">
               {t.about.objective}
             </p>
-            <p className="about-text">
-              {t.about.p1}
-            </p>
-            <p className="about-text">
-              {t.about.p2}
-            </p>
 
             <div className="info-list">
               <div className="info-item">
