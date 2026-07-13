@@ -61,11 +61,11 @@ export const translations = {
           points: [
             {
               label: 'Nghiên cứu & Phát triển AI (R&D)',
-              text: 'Tham gia phát triển hệ thống AI Influencer cho dự án nội bộ; đánh giá và thử nghiệm các mô hình Generative AI tiên tiến (Kling, Lyria 3 của Gemini) để nâng cấp và thay thế quy trình sản xuất video cũ.',
+              text: 'Tham gia phát triển hệ thống AI Influencer cho dự án nội bộ; đánh giá và thử nghiệm các mô hình Generative AI tiên tiến (Kling, Lyria 3 của Gemini) để nâng cấp quy trình sản xuất video, nâng tỷ lệ ảnh đạt duyệt từ 70% lên 90%.',
             },
             {
               label: 'Vận hành & Tự động hoá',
-              text: 'Quản lý và vận hành hệ thống tài khoản mạng xã hội quy mô lớn; thiết lập các quy trình tự động (warming) và môi trường bảo mật nghiêm ngặt (tích hợp Proxy, xác thực 2FA).',
+              text: 'Quản lý và vận hành 8 tài khoản mạng xã hội trên nhiều nền tảng khác nhau; thiết lập các quy trình tự động (warming) và môi trường bảo mật nghiêm ngặt (tích hợp Proxy, xác thực 2FA).',
             },
             {
               label: 'Kiến trúc AI & Đào tạo nội bộ',
@@ -208,11 +208,11 @@ export const translations = {
           points: [
             {
               label: 'AI Research & Development (R&D)',
-              text: 'Contributed to building an AI Influencer system for an internal project; evaluated and experimented with advanced Generative AI models (Kling, Gemini’s Lyria 3) to upgrade and replace the legacy video-production pipeline.',
+              text: 'Contributed to building an AI Influencer system for an internal project; evaluated and experimented with advanced Generative AI models (Kling, Gemini’s Lyria 3) to upgrade the video-production pipeline, raising the approved-image rate from 70% to 90%.',
             },
             {
               label: 'Operations & Automation',
-              text: 'Managed and operated a large-scale social-media account system; set up automated warming workflows and a strict security environment (Proxy integration, 2FA).',
+              text: 'Managed and operated 8 social-media accounts across multiple platforms; set up automated warming workflows and a strict security environment (Proxy integration, 2FA).',
             },
             {
               label: 'AI Architecture & Internal Training',
