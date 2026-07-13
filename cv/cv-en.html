@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Nguyen Le Anh Truc — Resume</title>
+<style>
+  @page { size: A4; margin: 13mm 15mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #fff; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  header { text-align: center; border-bottom: 2px solid #333; padding-bottom: 12px; }
+  header .rule-top { border-top: 2px solid #333; margin-bottom: 14px; }
+  .name {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 27pt; font-weight: 700; letter-spacing: 4px; color: #111;
+  }
+  .title {
+    font-size: 11pt; letter-spacing: 3px; text-transform: uppercase;
+    color: #4b5563; margin: 6px 0 10px;
+  }
+  .contact { font-size: 9.5pt; color: #374151; }
+  .contact .sep { color: #9ca3af; margin: 0 6px; }
+
+  section { margin-top: 16px; }
+  h2 {
+    font-size: 11pt; letter-spacing: 2px; text-transform: uppercase; color: #111;
+    border-bottom: 1px solid #9ca3af; padding-bottom: 4px; margin-bottom: 9px;
+  }
+  p.summary { text-align: justify; color: #374151; }
+
+  .entry { margin-bottom: 11px; break-inside: avoid; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .entry-role { font-weight: 700; color: #111; font-size: 10.8pt; }
+  .entry-date { font-size: 9.5pt; color: #4b5563; white-space: nowrap; }
+  .entry-sub { font-size: 9.8pt; color: #4b5563; font-style: italic; margin-bottom: 3px; }
+
+  ul { margin: 3px 0 0 17px; }
+  li { margin-bottom: 2.5px; color: #374151; }
+  li b, .entry-sub b { color: #1f2937; }
+
+  .link { color: #1d4ed8; text-decoration: none; word-break: break-all; }
+  .muted-link { font-size: 9.3pt; color: #4b5563; }
+  .muted-link a { color: #1d4ed8; text-decoration: none; }
+  .skills li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="rule-top"></div>
+    <div class="name">NGUYEN LE ANH TRUC</div>
+    <div class="title">Software Engineer · Full-stack &amp; AI</div>
+    <div class="contact">
+      +84 338 493 544 <span class="sep">•</span>
+      truc141004@gmail.com <span class="sep">•</span>
+      Ho Chi Minh City, Vietnam
+    </div>
+    <div class="contact" style="margin-top:3px;">
+      trucnguyen-portfolio.vercel.app <span class="sep">•</span>
+      github.com/TrucNguyen1410
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">
+      Final-year Software Engineering student and Prompt Engineer intern at Athena Studio.
+      I have shipped 3 real-world products across web, mobile and AI (ReactJS, Node.js, Flutter,
+      Claude/OpenAI) — a fast, self-driven learner focused on turning technology into useful solutions.
+    </p>
+  </section>
+
+  <section>
+    <h2>Work Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Athena Studio — Prompt Engineer Intern</span>
+        <span class="entry-date">05/2026 – Present</span>
+      </div>
+      <ul>
+        <li><b>AI Research &amp; Development (R&amp;D):</b> built an internal AI Influencer system; evaluated and experimented with Generative AI models (Kling, Lyria 3) to upgrade the video-production pipeline, raising the approved-image rate from 70% to 90%.</li>
+        <li><b>Operations &amp; Automation:</b> managed and operated 8 social-media accounts across platforms; set up automated warming workflows and a strict security environment (Proxy, 2FA).</li>
+        <li><b>AI Architecture &amp; Internal Training:</b> researched and authored in-depth training documentation on Multi-Agent architecture and the LangChain framework for the development team.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Automation Land — Flutter Developer Intern</span>
+        <span class="entry-date">02/2026 – 05/2026</span>
+      </div>
+      <ul>
+        <li>Owned the entire Flutter client of the CCMG exam-prep app (2,000+ questions, 99+ mock-exam sets matching the Ministry of Construction exam structure).</li>
+        <li>Built features: progress tracking, a timed mock-exam mode, a "save wrong answers to review" function, and account login; responsive Material Design UI.</li>
+        <li>Integrated APIs from the backend team; collaborated with the backend &amp; deployment teams in an Agile workflow.</li>
+        <li class="muted-link">Google Play: <a class="link" href="https://play.google.com/store/apps/details?id=com.automation.ccmg.client&hl=en">play.google.com/store/apps/details?id=com.automation.ccmg.client</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Projects</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Laptop Decision-Support System (AHP)</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <div class="entry-sub">AI &amp; Machine Learning Developer · Python, PostgreSQL, AHP, AI</div>
+      <ul>
+        <li>Designed and deployed a laptop-recommendation system using the AHP algorithm, analyzing 5+ criteria (price, performance, design, battery, brand) to rank the best matches for each user.</li>
+        <li class="muted-link">Demo: <a class="link" href="https://analytic-hierarchy-process-one.vercel.app/">analytic-hierarchy-process-one.vercel.app</a></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">E-commerce Platform for Art &amp; Cultural Products</span>
+        <span class="entry-date">2025</span>
+      </div>
+      <div class="entry-sub">Full-stack Developer · ReactJS, Node.js, Express, MongoDB</div>
+      <ul>
+        <li>Built a full-stack e-commerce system with 3 core modules: product management, order processing and an admin dashboard; integrated an advisory chatbot.</li>
+        <li>Designed a RESTful API with 15+ endpoints, JWT authentication and role-based access (Admin / Customer); integrated PayPal &amp; VietQR payments.</li>
+        <li class="muted-link">Demo: <a class="link" href="https://art-shop-fullstack-panx.vercel.app/">art-shop-fullstack-panx.vercel.app</a></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Family Health Handbook</span>
+        <span class="entry-date">2025</span>
+      </div>
+      <div class="entry-sub">Mobile Developer · Flutter, Node.js, MongoDB Atlas</div>
+      <ul>
+        <li>Cross-platform mobile app (iOS &amp; Android) to manage health records and medical history for multiple family members under one account.</li>
+        <li>Built a full-CRUD RESTful API with lab-result/prescription image uploads; integrated Geolocator + OpenStreetMap to suggest the nearest medical facility in real time.</li>
+        <li class="muted-link">Demo: <a class="link" href="https://healthbook-53606.web.app/">healthbook-53606.web.app</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li><b>Backend:</b> Node.js, .NET, Express</li>
+      <li><b>Frontend / Mobile:</b> ReactJS, Flutter, Dart</li>
+      <li><b>Databases:</b> MongoDB, SQL Server, PostgreSQL (Neon)</li>
+      <li><b>Cloud / DevOps:</b> Vercel, Render, Git, GitHub</li>
+      <li><b>AI / LLM:</b> Claude API, OpenAI API, Prompt Engineering, LangChain, Multi-Agent</li>
+      <li><b>Tools:</b> Postman, Figma, VS Code, Android Studio</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Ho Chi Minh City University of Natural Resources &amp; Environment (HCMUNRE)</span>
+        <span class="entry-date">2022 – 2026</span>
+      </div>
+      <div class="entry-sub">Major: Software Engineering</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications &amp; Languages</h2>
+    <ul>
+      <li><b>TOEIC 660</b> — IIG Vietnam</li>
+      <li><b>Google AI Essentials</b> — Google (2026)</li>
+      <li><b>Building with the Claude API</b> &amp; <b>AI Fluency</b> — Anthropic (2026)</li>
+      <li><b>Prompt Engineering &amp; LLMs</b> — DeepLearning.AI &amp; Google Cloud</li>
+    </ul>
+  </section>
+</body>
+</html>

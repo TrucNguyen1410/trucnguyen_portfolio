@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<title>Nguyễn Lê Anh Trúc — CV</title>
+<style>
+  @page { size: A4; margin: 13mm 15mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #fff; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  .serif { font-family: Georgia, 'Times New Roman', serif; }
+
+  header { text-align: center; border-bottom: 2px solid #333; padding-bottom: 12px; }
+  header .rule-top { border-top: 2px solid #333; margin-bottom: 14px; }
+  .name {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 27pt; font-weight: 700; letter-spacing: 4px; color: #111;
+  }
+  .title {
+    font-size: 11pt; letter-spacing: 3px; text-transform: uppercase;
+    color: #4b5563; margin: 6px 0 10px;
+  }
+  .contact { font-size: 9.5pt; color: #374151; }
+  .contact a { color: #374151; text-decoration: none; }
+  .contact .sep { color: #9ca3af; margin: 0 6px; }
+
+  section { margin-top: 16px; }
+  h2 {
+    font-size: 11pt; letter-spacing: 2px; text-transform: uppercase; color: #111;
+    border-bottom: 1px solid #9ca3af; padding-bottom: 4px; margin-bottom: 9px;
+  }
+
+  p.summary { text-align: justify; color: #374151; }
+
+  .entry { margin-bottom: 11px; break-inside: avoid; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .entry-role { font-weight: 700; color: #111; font-size: 10.8pt; }
+  .entry-date { font-size: 9.5pt; color: #4b5563; white-space: nowrap; }
+  .entry-sub { font-size: 9.8pt; color: #4b5563; font-style: italic; margin-bottom: 3px; }
+
+  ul { margin: 3px 0 0 17px; }
+  li { margin-bottom: 2.5px; color: #374151; }
+  li b, .entry-sub b { color: #1f2937; }
+
+  .link { color: #1d4ed8; text-decoration: none; word-break: break-all; }
+  .muted-link { font-size: 9.3pt; color: #4b5563; }
+  .muted-link a { color: #1d4ed8; text-decoration: none; }
+
+  .skills li { margin-bottom: 4px; }
+  .edu-line { display: flex; justify-content: space-between; gap: 12px; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="rule-top"></div>
+    <div class="name">NGUYỄN LÊ ANH TRÚC</div>
+    <div class="title">Software Engineer · Full-stack &amp; AI</div>
+    <div class="contact">
+      0338493544 <span class="sep">•</span>
+      truc141004@gmail.com <span class="sep">•</span>
+      TP. Hồ Chí Minh
+    </div>
+    <div class="contact" style="margin-top:3px;">
+      trucnguyen-portfolio.vercel.app <span class="sep">•</span>
+      github.com/TrucNguyen1410
+    </div>
+  </header>
+
+  <section>
+    <h2>Giới thiệu</h2>
+    <p class="summary">
+      Sinh viên năm cuối ngành Công nghệ Phần mềm, hiện thực tập Prompt Engineer tại Athena Studio.
+      Đã xây dựng 3 sản phẩm thực tế trên nền Web, Mobile và AI (ReactJS, Node.js, Flutter, Claude/OpenAI)
+      — học nhanh, chủ động và tập trung biến công nghệ thành giải pháp hữu ích.
+    </p>
+  </section>
+
+  <section>
+    <h2>Kinh nghiệm làm việc</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Athena Studio — Thực tập sinh Prompt Engineer</span>
+        <span class="entry-date">05/2026 – Hiện tại</span>
+      </div>
+      <ul>
+        <li><b>Nghiên cứu &amp; Phát triển AI (R&amp;D):</b> phát triển hệ thống AI Influencer nội bộ; đánh giá và thử nghiệm các mô hình Generative AI (Kling, Lyria 3) để nâng cấp quy trình sản xuất video, nâng tỷ lệ ảnh đạt duyệt từ 70% lên 90%.</li>
+        <li><b>Vận hành &amp; Tự động hoá:</b> quản lý và vận hành 8 tài khoản mạng xã hội đa nền tảng; thiết lập quy trình tự động (warming) và môi trường bảo mật (Proxy, xác thực 2FA).</li>
+        <li><b>Kiến trúc AI &amp; Đào tạo nội bộ:</b> nghiên cứu, xây dựng hệ thống tài liệu đào tạo về kiến trúc Multi-Agent và framework LangChain cho đội ngũ phát triển.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Automation Land — Thực tập sinh Flutter Developer</span>
+        <span class="entry-date">02/2026 – 05/2026</span>
+      </div>
+      <ul>
+        <li>Phát triển toàn bộ phần client Flutter cho app luyện thi CCMG (2.000+ câu hỏi, 99+ bộ đề bám sát cấu trúc kỳ thi Bộ Xây dựng).</li>
+        <li>Xây dựng các tính năng: thống kê tiến độ, thi thử có bấm giờ, lưu câu sai để ôn lại, đăng nhập tài khoản; giao diện Material Design responsive.</li>
+        <li>Tích hợp API từ team backend; phối hợp cùng nhóm backend &amp; deploy theo quy trình Agile.</li>
+        <li class="muted-link">Google Play: <a class="link" href="https://play.google.com/store/apps/details?id=com.automation.ccmg.client&hl=vi">play.google.com/store/apps/details?id=com.automation.ccmg.client</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dự án nổi bật</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Hệ thống hỗ trợ ra quyết định chọn Laptop (AHP)</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <div class="entry-sub">AI &amp; Machine Learning Developer · Python, PostgreSQL, AHP, AI</div>
+      <ul>
+        <li>Thiết kế và triển khai hệ thống gợi ý laptop dùng thuật toán AHP, phân tích 5+ tiêu chí (giá, hiệu năng, thiết kế, pin, thương hiệu) để xếp hạng sản phẩm phù hợp với từng người dùng.</li>
+        <li class="muted-link">Demo: <a class="link" href="https://analytic-hierarchy-process-one.vercel.app/">analytic-hierarchy-process-one.vercel.app</a></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Nền tảng TMĐT sản phẩm văn hoá – nghệ thuật</span>
+        <span class="entry-date">2025</span>
+      </div>
+      <div class="entry-sub">Full-stack Developer · ReactJS, Node.js, Express, MongoDB</div>
+      <ul>
+        <li>Xây dựng hệ thống thương mại điện tử fullstack với 3 module chính: quản lý sản phẩm, xử lý đơn hàng và dashboard admin; tích hợp chatbot tư vấn cho khách hàng.</li>
+        <li>Thiết kế RESTful API 15+ endpoints, xác thực JWT và phân quyền role-based (Admin / Customer); tích hợp thanh toán PayPal &amp; VietQR.</li>
+        <li class="muted-link">Demo: <a class="link" href="https://art-shop-fullstack-panx.vercel.app/">art-shop-fullstack-panx.vercel.app</a></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Sổ tay sức khoẻ gia đình</span>
+        <span class="entry-date">2025</span>
+      </div>
+      <div class="entry-sub">Mobile Developer · Flutter, Node.js, MongoDB Atlas</div>
+      <ul>
+        <li>Ứng dụng mobile cross-platform (iOS &amp; Android) quản lý hồ sơ và lịch sử bệnh án của nhiều thành viên trên cùng một tài khoản.</li>
+        <li>Xây dựng RESTful API đầy đủ CRUD, upload ảnh xét nghiệm/đơn thuốc; tích hợp Geolocator + OpenStreetMap để gợi ý cơ sở y tế gần nhất theo thời gian thực.</li>
+        <li class="muted-link">Demo: <a class="link" href="https://healthbook-53606.web.app/">healthbook-53606.web.app</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Kỹ năng</h2>
+    <ul class="skills">
+      <li><b>Backend:</b> Node.js, .NET, Express</li>
+      <li><b>Frontend / Mobile:</b> ReactJS, Flutter, Dart</li>
+      <li><b>Cơ sở dữ liệu:</b> MongoDB, SQL Server, PostgreSQL (Neon)</li>
+      <li><b>Cloud / DevOps:</b> Vercel, Render, Git, GitHub</li>
+      <li><b>AI / LLM:</b> Claude API, OpenAI API, Prompt Engineering, LangChain, Multi-Agent</li>
+      <li><b>Công cụ:</b> Postman, Figma, VS Code, Android Studio</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Học vấn</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Đại học Tài nguyên &amp; Môi trường TP.HCM (HCMUNRE)</span>
+        <span class="entry-date">2022 – 2026</span>
+      </div>
+      <div class="entry-sub">Chuyên ngành: Kỹ thuật Phần mềm</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Chứng chỉ &amp; Ngoại ngữ</h2>
+    <ul>
+      <li><b>TOEIC 660</b> — IIG Vietnam</li>
+      <li><b>Google AI Essentials</b> — Google (2026)</li>
+      <li><b>Building with the Claude API</b> &amp; <b>AI Fluency</b> — Anthropic (2026)</li>
+      <li><b>Prompt Engineering &amp; LLMs</b> — DeepLearning.AI &amp; Google Cloud</li>
+    </ul>
+  </section>
+</body>
+</html>
