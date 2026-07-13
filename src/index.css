@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* New Color Palette from User */
@@ -28,8 +28,8 @@
   --space-gradient: none;
 
   /* Typography */
-  --font-main: 'Outfit', sans-serif;
-  --font-heading: 'Montserrat', sans-serif;
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Be Vietnam Pro', sans-serif;
 }
 
 /* Dark theme overrides */
