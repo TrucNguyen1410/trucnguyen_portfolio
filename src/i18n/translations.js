@@ -7,6 +7,7 @@ export const translations = {
     nav: {
       home: 'Trang chủ',
       about: 'Giới thiệu',
+      experience: 'Kinh nghiệm',
       skills: 'Kỹ năng',
       certificates: 'Chứng chỉ',
       projects: 'Dự án',
@@ -45,6 +46,60 @@ export const translations = {
       infoPassionLabel: 'Đam mê:',
       infoPassionValue: 'Web, Mobile & AI',
       infoEmailLabel: 'Email:',
+    },
+    experience: {
+      subheading: 'HÀNH TRÌNH',
+      titleLine: 'Kinh',
+      titleHighlight: 'Nghiệm',
+      currentLabel: 'Hiện tại',
+      items: [
+        {
+          company: 'Athena Studio',
+          role: 'Thực tập sinh Prompt Engineer',
+          period: '05/2026 – Hiện tại',
+          current: true,
+          points: [
+            {
+              label: 'Nghiên cứu & Phát triển AI (R&D)',
+              text: 'Tham gia phát triển hệ thống AI Influencer cho dự án nội bộ; đánh giá và thử nghiệm các mô hình Generative AI tiên tiến (Kling, Lyria 3 của Gemini) để nâng cấp và thay thế quy trình sản xuất video cũ.',
+            },
+            {
+              label: 'Vận hành & Tự động hoá',
+              text: 'Quản lý và vận hành hệ thống tài khoản mạng xã hội quy mô lớn; thiết lập các quy trình tự động (warming) và môi trường bảo mật nghiêm ngặt (tích hợp Proxy, xác thực 2FA).',
+            },
+            {
+              label: 'Kiến trúc AI & Đào tạo nội bộ',
+              text: 'Nghiên cứu, xây dựng và hoàn thiện hệ thống tài liệu đào tạo chuyên sâu về kiến trúc Multi-Agent và framework LangChain cho đội ngũ phát triển.',
+            },
+          ],
+          tech: ['Generative AI', 'LangChain', 'Multi-Agent', 'Prompt Engineering', 'Automation'],
+        },
+        {
+          company: 'Automation Land',
+          role: 'Thực tập sinh Flutter Developer',
+          period: '02/2026 – 05/2026',
+          current: false,
+          points: [
+            {
+              label: 'Phát triển ứng dụng',
+              text: 'Xây dựng app luyện thi CCMG bằng Flutter với 2.000+ câu hỏi và 99+ bộ đề bám sát cấu trúc kỳ thi của Bộ Xây dựng.',
+            },
+            {
+              label: 'Tính năng & Trải nghiệm',
+              text: 'Phát triển thống kê tiến độ học tập, chế độ thi thử có bấm giờ, chức năng lưu câu hỏi sai để ôn lại và hệ thống tài khoản đồng bộ tiến độ; giao diện Material Design responsive.',
+            },
+            {
+              label: 'Kỹ thuật & Cộng tác',
+              text: 'Quản lý state, tổ chức kiến trúc code và tối ưu hiệu năng ứng dụng; phối hợp cùng nhóm theo quy trình Agile, tiếp nhận phản hồi để cải tiến sản phẩm.',
+            },
+          ],
+          tech: ['Flutter', 'Dart', 'Material Design'],
+          link: {
+            label: 'Google Play',
+            url: 'https://play.google.com/store/apps/details?id=com.automation.ccmg.client&hl=vi',
+          },
+        },
+      ],
     },
     skills: {
       subheading: 'CHUYÊN MÔN',
@@ -99,6 +154,7 @@ export const translations = {
     nav: {
       home: 'Home',
       about: 'About',
+      experience: 'Experience',
       skills: 'Skills',
       certificates: 'Certs',
       projects: 'Projects',
@@ -137,6 +193,60 @@ export const translations = {
       infoPassionLabel: 'Passion:',
       infoPassionValue: 'Web, Mobile & AI',
       infoEmailLabel: 'Email:',
+    },
+    experience: {
+      subheading: 'JOURNEY',
+      titleLine: 'Work',
+      titleHighlight: 'Experience',
+      currentLabel: 'Current',
+      items: [
+        {
+          company: 'Athena Studio',
+          role: 'Prompt Engineer Intern',
+          period: '05/2026 – Present',
+          current: true,
+          points: [
+            {
+              label: 'AI Research & Development (R&D)',
+              text: 'Contributed to building an AI Influencer system for an internal project; evaluated and experimented with advanced Generative AI models (Kling, Gemini’s Lyria 3) to upgrade and replace the legacy video-production pipeline.',
+            },
+            {
+              label: 'Operations & Automation',
+              text: 'Managed and operated a large-scale social-media account system; set up automated warming workflows and a strict security environment (Proxy integration, 2FA).',
+            },
+            {
+              label: 'AI Architecture & Internal Training',
+              text: 'Researched and built in-depth training documentation on Multi-Agent architecture and the LangChain framework for the development team.',
+            },
+          ],
+          tech: ['Generative AI', 'LangChain', 'Multi-Agent', 'Prompt Engineering', 'Automation'],
+        },
+        {
+          company: 'Automation Land',
+          role: 'Flutter Developer Intern',
+          period: '02/2026 – 05/2026',
+          current: false,
+          points: [
+            {
+              label: 'App Development',
+              text: 'Built the CCMG exam-prep app in Flutter with 2,000+ questions and 99+ mock-exam sets closely matching the Ministry of Construction exam structure.',
+            },
+            {
+              label: 'Features & UX',
+              text: 'Developed progress-tracking statistics, a timed mock-exam mode, a “save wrong answers to review” feature, and user accounts that sync progress; responsive Material Design UI.',
+            },
+            {
+              label: 'Engineering & Collaboration',
+              text: 'Handled state management, code architecture and performance optimization; collaborated with the team in an Agile workflow, incorporating feedback to improve the product.',
+            },
+          ],
+          tech: ['Flutter', 'Dart', 'Material Design'],
+          link: {
+            label: 'Google Play',
+            url: 'https://play.google.com/store/apps/details?id=com.automation.ccmg.client&hl=vi',
+          },
+        },
+      ],
     },
     skills: {
       subheading: 'EXPERTISE',

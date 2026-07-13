@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Home, User, Code, Briefcase, Mail, Menu, X, Award, Sun, Moon, Download, ChevronDown, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
+import { Home, User, Code, Briefcase, Mail, Menu, X, Award, Sun, Moon, Download, ChevronDown, PanelLeftClose, PanelLeftOpen, Building2 } from 'lucide-react';
 import { useSite } from '../context/SiteContext';
 import './Navigation.css';
 
@@ -23,6 +23,7 @@ const Navigation = () => {
   const navItems = [
     { id: 'home', icon: <Home size={20} />, label: t.nav.home },
     { id: 'about', icon: <User size={20} />, label: t.nav.about },
+    { id: 'experience', icon: <Building2 size={20} />, label: t.nav.experience },
     { id: 'skills', icon: <Code size={20} />, label: t.nav.skills },
     { id: 'certificates', icon: <Award size={20} />, label: t.nav.certificates },
     { id: 'projects', icon: <Briefcase size={20} />, label: t.nav.projects },
@@ -31,7 +32,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'certificates', 'projects', 'contact'];
+      const sections = ['home', 'about', 'experience', 'skills', 'certificates', 'projects', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {

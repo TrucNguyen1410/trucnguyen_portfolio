@@ -212,6 +212,7 @@ ul {
 @media (min-width: 993px) {
   .hero-section,
   .about-section,
+  .experience-section,
   .skills-section,
   .certificates-section,
   .contact-section,
@@ -221,6 +222,7 @@ ul {
 
   .app[data-nav='collapsed'] .hero-section,
   .app[data-nav='collapsed'] .about-section,
+  .app[data-nav='collapsed'] .experience-section,
   .app[data-nav='collapsed'] .skills-section,
   .app[data-nav='collapsed'] .certificates-section,
   .app[data-nav='collapsed'] .contact-section,
