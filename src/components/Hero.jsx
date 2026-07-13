@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { Download } from 'lucide-react';
 import { useSite } from '../context/SiteContext';
 import './Hero.css';
 
 const Hero = () => {
-  const { t } = useSite();
+  const { t, lang } = useSite();
+  const cvFile = lang === 'en' ? '/cv-en.pdf' : '/cv-vi.pdf';
+  const cvName = lang === 'en' ? 'Nguyen_Le_Anh_Truc_CV_EN.pdf' : 'Nguyen_Le_Anh_Truc_CV_VI.pdf';
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -75,6 +78,9 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
+              <a href={cvFile} download={cvName} className="btn btn-cv">
+                <Download size={18} /> {t.hero.btnCV}
+              </a>
               <a href="#projects" className="btn btn-primary">{t.hero.btnProjects}</a>
               <a href="#contact" className="btn btn-outline">{t.hero.btnConnect}</a>
             </motion.div>

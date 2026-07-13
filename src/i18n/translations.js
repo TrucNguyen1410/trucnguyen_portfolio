@@ -31,6 +31,7 @@ export const translations = {
         'Full-stack Developer chuyên phát triển Mobile & Web App hiện đại, kết hợp sức mạnh của AI để giải quyết các bài toán thực tế hiệu quả.',
       btnProjects: 'XEM DỰ ÁN',
       btnConnect: 'KẾT NỐI',
+      btnCV: 'TẢI CV',
       scroll: 'CUỘN',
     },
     about: {
@@ -131,11 +132,11 @@ export const translations = {
         5: 'Thiết kế hệ thống & OOAD',
       },
       descriptions: {
-        1: 'Hệ thống hỗ trợ ra quyết định chọn mua laptop thông minh ứng dụng thuật toán Analytic Hierarchy Process (AHP) kết hợp AI.',
-        2: 'Nền tảng thương mại điện tử chuyên biệt dành cho các sản phẩm văn hóa, nghệ thuật (tranh, tượng, v.v.).',
-        3: 'Ứng dụng di động giúp người dùng dễ dàng quản lý thông tin và hồ sơ sức khỏe y tế.',
-        4: 'Phần mềm quản lý đặt vé xem phim thiết kế chuẩn mực, tối ưu hóa thao tác nghiệp vụ tại chỗ.',
-        5: 'Hệ thống quản lý giáo dục toàn diện hỗ trợ đa luồng người dùng (Quản trị viên, Giảng viên, Sinh viên).',
+        1: 'Giải bài toán "chọn laptop nào?" giữa hàng trăm lựa chọn: hệ thống hỗ trợ ra quyết định dùng thuật toán AHP kết hợp AI để xếp hạng sản phẩm theo đúng tiêu chí và ngân sách của từng người dùng.',
+        2: 'Nền tảng thương mại điện tử cho sản phẩm nghệ thuật (tranh, tượng...), tích hợp chatbot tư vấn giúp khách hàng dễ dàng khám phá và chọn mua tác phẩm phù hợp.',
+        3: 'Ứng dụng di động giúp người dùng chủ động quản lý hồ sơ và thông tin sức khoẻ ở một nơi duy nhất, thay cho giấy tờ rời rạc — dễ tra cứu và theo dõi mọi lúc.',
+        4: 'Phần mềm desktop quản lý đặt vé xem phim, số hoá và tối ưu quy trình bán vé tại quầy nhằm giảm thao tác thủ công và hạn chế nhầm lẫn.',
+        5: 'Hệ thống quản lý đào tạo cho 3 vai trò (Quản trị viên, Giảng viên, Sinh viên), chuẩn hoá quy trình từ mở lớp, ghi danh đến quản lý điểm — thiết kế theo OOAD/UML.',
       },
     },
     contact: {
@@ -178,6 +179,7 @@ export const translations = {
         'Full-stack Developer focused on building modern Mobile & Web apps, harnessing the power of AI to solve real-world problems effectively.',
       btnProjects: 'VIEW PROJECTS',
       btnConnect: "LET'S CONNECT",
+      btnCV: 'DOWNLOAD CV',
       scroll: 'SCROLL',
     },
     about: {
@@ -278,11 +280,11 @@ export const translations = {
         5: 'System Design & OOAD',
       },
       descriptions: {
-        1: 'A decision support system for smart laptop purchasing, applying the Analytic Hierarchy Process (AHP) algorithm combined with AI.',
-        2: 'A specialized e-commerce platform for cultural and artistic products (paintings, sculptures, etc.).',
-        3: 'A mobile app that helps users easily manage their personal health information and medical records.',
-        4: 'Cinema ticket booking management software with a polished design, optimizing on-site operational workflows.',
-        5: 'A comprehensive education management system supporting multiple user roles (Admin, Lecturer, Student).',
+        1: 'Solves the "which laptop should I buy?" problem across hundreds of options: a decision-support system using the AHP algorithm combined with AI to rank products against each user’s own criteria and budget.',
+        2: 'An e-commerce platform for artistic products (paintings, sculptures...), with an advisory chatbot that helps customers discover and choose the right pieces.',
+        3: 'A mobile app that lets users proactively manage their health records and information in one place instead of scattered paperwork — easy to look up and track anytime.',
+        4: 'Desktop software for cinema ticket booking that digitizes and streamlines the on-site sales workflow to reduce manual steps and errors.',
+        5: 'A training-management system for 3 roles (Admin, Lecturer, Student), standardizing the flow from opening classes and enrollment to grade management — designed with OOAD/UML.',
       },
     },
     contact: {

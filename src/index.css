@@ -208,6 +208,18 @@ ul {
   transform: translateY(-5px);
 }
 
+.btn-cv {
+  gap: 0.55rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  box-shadow: 0 10px 24px rgba(92, 198, 238, 0.35), 0 0 22px rgba(92, 198, 238, 0.25);
+}
+
+.btn-cv:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 16px 34px rgba(92, 198, 238, 0.5);
+}
+
 /* When the sidebar is collapsed (desktop), sections reclaim the offset space */
 @media (min-width: 993px) {
   .hero-section,
