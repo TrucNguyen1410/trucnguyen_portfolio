@@ -81,19 +81,19 @@ export const translations = {
           current: false,
           points: [
             {
-              label: 'Phát triển ứng dụng',
-              text: 'Xây dựng app luyện thi CCMG bằng Flutter với 2.000+ câu hỏi và 99+ bộ đề bám sát cấu trúc kỳ thi của Bộ Xây dựng.',
+              label: 'Phát triển giao diện (Flutter)',
+              text: 'Đảm nhận toàn bộ phần client Flutter của app luyện thi CCMG (2.000+ câu hỏi, 99+ bộ đề bám sát cấu trúc kỳ thi của Bộ Xây dựng).',
             },
             {
               label: 'Tính năng & Trải nghiệm',
-              text: 'Phát triển thống kê tiến độ học tập, chế độ thi thử có bấm giờ, chức năng lưu câu hỏi sai để ôn lại và hệ thống tài khoản đồng bộ tiến độ; giao diện Material Design responsive.',
+              text: 'Hiện thực các màn hình: thống kê tiến độ học tập, chế độ thi thử có bấm giờ, lưu câu hỏi sai để ôn lại và đăng nhập tài khoản; giao diện Material Design responsive.',
             },
             {
-              label: 'Kỹ thuật & Cộng tác',
-              text: 'Quản lý state, tổ chức kiến trúc code và tối ưu hiệu năng ứng dụng; phối hợp cùng nhóm theo quy trình Agile, tiếp nhận phản hồi để cải tiến sản phẩm.',
+              label: 'Tích hợp & Cộng tác',
+              text: 'Quản lý state, tổ chức kiến trúc code phía client và tối ưu hiệu năng; tích hợp API từ team backend, phối hợp cùng các nhóm backend và triển khai (deploy) theo quy trình Agile.',
             },
           ],
-          tech: ['Flutter', 'Dart', 'Material Design'],
+          tech: ['Flutter', 'Dart', 'Material Design', 'REST API'],
           link: {
             label: 'Google Play',
             url: 'https://play.google.com/store/apps/details?id=com.automation.ccmg.client&hl=vi',
@@ -228,19 +228,19 @@ export const translations = {
           current: false,
           points: [
             {
-              label: 'App Development',
-              text: 'Built the CCMG exam-prep app in Flutter with 2,000+ questions and 99+ mock-exam sets closely matching the Ministry of Construction exam structure.',
+              label: 'Front-end (Flutter)',
+              text: 'Owned the entire Flutter client of the CCMG exam-prep app (2,000+ questions, 99+ mock-exam sets matching the Ministry of Construction exam structure).',
             },
             {
               label: 'Features & UX',
-              text: 'Developed progress-tracking statistics, a timed mock-exam mode, a “save wrong answers to review” feature, and user accounts that sync progress; responsive Material Design UI.',
+              text: 'Implemented the screens: progress tracking, a timed mock-exam mode, a “save wrong answers to review” feature, and account login; responsive Material Design UI.',
             },
             {
-              label: 'Engineering & Collaboration',
-              text: 'Handled state management, code architecture and performance optimization; collaborated with the team in an Agile workflow, incorporating feedback to improve the product.',
+              label: 'Integration & Collaboration',
+              text: 'Handled state management, client-side architecture and performance; integrated APIs from the backend team and collaborated with the backend and deployment teams in an Agile workflow.',
             },
           ],
-          tech: ['Flutter', 'Dart', 'Material Design'],
+          tech: ['Flutter', 'Dart', 'Material Design', 'REST API'],
           link: {
             label: 'Google Play',
             url: 'https://play.google.com/store/apps/details?id=com.automation.ccmg.client&hl=vi',
