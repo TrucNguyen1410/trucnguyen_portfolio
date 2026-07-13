@@ -41,6 +41,9 @@ const About = () => {
               {t.about.titleLine1} <br />
               <span className="highlight">{t.about.titleHighlight}</span>
             </h2>
+            <p className="about-objective">
+              {t.about.objective}
+            </p>
             <p className="about-text">
               {t.about.p1}
             </p>
