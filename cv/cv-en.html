@@ -10,8 +10,8 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
     color: #1f2937;
-    font-size: 10.5pt;
-    line-height: 1.5;
+    font-size: 10pt;
+    line-height: 1.45;
     max-width: 780px;
     margin: 0 auto;
     padding: 24px;
@@ -29,14 +29,14 @@
   .contact { font-size: 9.5pt; color: #374151; }
   .contact .sep { color: #9ca3af; margin: 0 6px; }
 
-  section { margin-top: 16px; }
+  section { margin-top: 11px; }
   h2 {
     font-size: 11pt; letter-spacing: 2px; text-transform: uppercase; color: #111;
     border-bottom: 1px solid #9ca3af; padding-bottom: 4px; margin-bottom: 9px;
   }
   p.summary { text-align: justify; color: #374151; }
 
-  .entry { margin-bottom: 11px; break-inside: avoid; }
+  .entry { margin-bottom: 8px; break-inside: avoid; }
   .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
   .entry-role { font-weight: 700; color: #111; font-size: 10.8pt; }
   .entry-date { font-size: 9.5pt; color: #4b5563; white-space: nowrap; }
@@ -109,6 +109,19 @@
 
   <section>
     <h2>Featured Projects</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">HealthAI — Calories Prediction App</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <div class="entry-sub">Mobile &amp; Web Developer · Flutter, Node.js, MongoDB, Python, scikit-learn, Groq LLM</div>
+      <ul>
+        <li>Built a cross-platform (Mobile + Web) health-tracking app with a Flutter client and a Node.js/Express REST API on MongoDB Atlas, with JWT and Google OAuth sign-in.</li>
+        <li>Built a calorie-burn prediction model in scikit-learn (GradientBoosting, R² 0.99), plus a conversational AI health assistant (Groq LLM) and Google Fit data sync.</li>
+        <li class="muted-link">Repository: <a class="link" href="https://github.com/TrucNguyen1410/calories-prediction-app">github.com/TrucNguyen1410/calories-prediction-app</a></li>
+      </ul>
+    </div>
 
     <div class="entry">
       <div class="entry-head">
