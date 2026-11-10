@@ -56,7 +56,7 @@ export const translations = {
       items: [
         {
           company: 'Athena Studio',
-          role: 'Thực tập sinh Prompt Engineer',
+          role: 'Prompt Engineer',
           period: '05/2026 – Hiện tại',
           current: true,
           points: [
@@ -209,7 +209,7 @@ export const translations = {
       items: [
         {
           company: 'Athena Studio',
-          role: 'Prompt Engineer Intern',
+          role: 'Prompt Engineer',
           period: '05/2026 – Present',
           current: true,
           points: [

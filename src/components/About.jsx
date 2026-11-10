@@ -22,8 +22,8 @@ const About = () => {
             </div>
             <div className="about-img-wrapper">
               <img
-                src="/assets/hcmunre.webp"
-                alt="HCMUNRE Official"
+                src="/assets/about-me.webp"
+                alt="Nguyễn Lê Anh Trúc"
                 className="about-main-img"
               />
             </div>
