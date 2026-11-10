@@ -62,18 +62,22 @@ export const translations = {
           points: [
             {
               label: 'Nghiên cứu & Phát triển AI (R&D)',
-              text: 'Tham gia phát triển hệ thống AI Influencer cho dự án nội bộ; đánh giá và thử nghiệm các mô hình Generative AI tiên tiến (Kling, Lyria 3 của Gemini) để nâng cấp quy trình sản xuất video, nâng tỷ lệ ảnh đạt duyệt từ 70% lên 90%.',
+              text: 'Tham gia phát triển hệ thống AI Influencer cho dự án nội bộ; đánh giá và thử nghiệm các mô hình Generative AI tiên tiến (Kling, Lyria 3 của Gemini) và nền tảng Higgsfield để nâng cấp quy trình sản xuất video, nâng tỷ lệ ảnh đạt duyệt từ 70% lên 90%.',
             },
             {
               label: 'Vận hành & Tự động hoá',
-              text: 'Quản lý và vận hành 8 tài khoản mạng xã hội trên nhiều nền tảng khác nhau; thiết lập các quy trình tự động (warming) và môi trường bảo mật nghiêm ngặt (tích hợp Proxy, xác thực 2FA).',
+              text: 'Quản lý và vận hành nhiều tài khoản mạng xã hội trên nhiều nền tảng; thiết lập quy trình tự động hoá và môi trường bảo mật nghiêm ngặt (Proxy, xác thực 2FA), xử lý sự cố phát sinh và chuẩn hoá quy trình vận hành (SOP).',
             },
             {
-              label: 'Kiến trúc AI & Đào tạo nội bộ',
-              text: 'Nghiên cứu, xây dựng và hoàn thiện hệ thống tài liệu đào tạo chuyên sâu về kiến trúc Multi-Agent và framework LangChain cho đội ngũ phát triển.',
+              label: 'Công cụ nội bộ & Phân tích dữ liệu',
+              text: 'Xây dựng dashboard theo dõi hiệu suất, chi phí và trạng thái hoạt động của tài khoản; tự động thu thập dữ liệu theo lịch bằng Apify, tạo báo cáo tuần và theo dõi lượt click trên liên kết UTM. Ước tính và tối ưu chi phí hạ tầng (cloud, API, cơ sở dữ liệu) dựa trên số liệu thực tế.',
+            },
+            {
+              label: 'AI Architecture & Đào tạo nội bộ',
+              text: 'Xây dựng pipeline AI tự động tổng hợp và phân loại mức độ ưu tiên cho tin tức thay đổi thuật toán nền tảng (LLM, có cơ chế dự phòng); nghiên cứu và biên soạn tài liệu đào tạo về kiến trúc Multi-Agent và framework LangChain cho đội ngũ phát triển.',
             },
           ],
-          tech: ['Generative AI', 'LangChain', 'Multi-Agent', 'Prompt Engineering', 'Automation'],
+          tech: ['Generative AI', 'LangChain', 'Multi-Agent', 'Prompt Engineering', 'Higgsfield', 'Apify', 'Automation', 'Data Dashboard'],
         },
         {
           company: 'Automation Land',
@@ -211,18 +215,22 @@ export const translations = {
           points: [
             {
               label: 'AI Research & Development (R&D)',
-              text: 'Contributed to building an AI Influencer system for an internal project; evaluated and experimented with advanced Generative AI models (Kling, Gemini’s Lyria 3) to upgrade the video-production pipeline, raising the approved-image rate from 70% to 90%.',
+              text: 'Contributed to building an AI Influencer system for an internal project; evaluated and experimented with advanced Generative AI models (Kling, Gemini’s Lyria 3) and the Higgsfield platform to upgrade the video-production pipeline, raising the approved-image rate from 70% to 90%.',
             },
             {
               label: 'Operations & Automation',
-              text: 'Managed and operated 8 social-media accounts across multiple platforms; set up automated warming workflows and a strict security environment (Proxy integration, 2FA).',
+              text: 'Managed and operated multiple social-media accounts across platforms; set up automated workflows and a strict security environment (Proxy, 2FA), handled operational incidents and standardized runbooks (SOPs).',
+            },
+            {
+              label: 'Internal Tooling & Data Analytics',
+              text: 'Built dashboards to track account performance, operating costs and account health; automated scheduled data collection with Apify, weekly reporting and UTM link click tracking. Estimated and optimized infrastructure costs (cloud, APIs, databases) based on real usage data.',
             },
             {
               label: 'AI Architecture & Internal Training',
-              text: 'Researched and built in-depth training documentation on Multi-Agent architecture and the LangChain framework for the development team.',
+              text: 'Built an AI pipeline that automatically summarizes and prioritizes news about social-platform algorithm changes (LLM-based, with fallback providers); researched and authored in-depth training documentation on Multi-Agent architecture and the LangChain framework for the development team.',
             },
           ],
-          tech: ['Generative AI', 'LangChain', 'Multi-Agent', 'Prompt Engineering', 'Automation'],
+          tech: ['Generative AI', 'LangChain', 'Multi-Agent', 'Prompt Engineering', 'Higgsfield', 'Apify', 'Automation', 'Data Dashboard'],
         },
         {
           company: 'Automation Land',
