@@ -133,14 +133,14 @@ export const translations = {
         2: 'Phát triển Web',
         3: 'Ứng dụng Mobile',
         4: 'Phần mềm Desktop',
-        5: 'Thiết kế hệ thống & OOAD',
+        5: 'Mobile & Web + AI',
       },
       descriptions: {
         1: 'Giải bài toán "chọn laptop nào?" giữa hàng trăm lựa chọn: hệ thống hỗ trợ ra quyết định dùng thuật toán AHP kết hợp AI để xếp hạng sản phẩm theo đúng tiêu chí và ngân sách của từng người dùng.',
         2: 'Nền tảng thương mại điện tử cho sản phẩm nghệ thuật (tranh, tượng...), tích hợp chatbot tư vấn giúp khách hàng dễ dàng khám phá và chọn mua tác phẩm phù hợp.',
         3: 'Ứng dụng di động giúp người dùng chủ động quản lý hồ sơ và thông tin sức khoẻ ở một nơi duy nhất, thay cho giấy tờ rời rạc — dễ tra cứu và theo dõi mọi lúc.',
         4: 'Phần mềm desktop quản lý đặt vé xem phim, số hoá và tối ưu quy trình bán vé tại quầy nhằm giảm thao tác thủ công và hạn chế nhầm lẫn.',
-        5: 'Hệ thống quản lý đào tạo cho 3 vai trò (Quản trị viên, Giảng viên, Sinh viên), chuẩn hoá quy trình từ mở lớp, ghi danh đến quản lý điểm — thiết kế theo OOAD/UML.',
+        5: 'Ứng dụng đa nền tảng theo dõi dinh dưỡng và vận động, kết hợp trợ lý AI hội thoại, mô hình học máy dự đoán calo tiêu hao (R² 0.99) và đồng bộ dữ liệu từ Google Fit.',
       },
     },
     contact: {
@@ -286,14 +286,14 @@ export const translations = {
         2: 'Web Development',
         3: 'Mobile App',
         4: 'Desktop Software',
-        5: 'System Design & OOAD',
+        5: 'Mobile & Web + AI',
       },
       descriptions: {
         1: 'Solves the "which laptop should I buy?" problem across hundreds of options: a decision-support system using the AHP algorithm combined with AI to rank products against each user’s own criteria and budget.',
         2: 'An e-commerce platform for artistic products (paintings, sculptures...), with an advisory chatbot that helps customers discover and choose the right pieces.',
         3: 'A mobile app that lets users proactively manage their health records and information in one place instead of scattered paperwork — easy to look up and track anytime.',
         4: 'Desktop software for cinema ticket booking that digitizes and streamlines the on-site sales workflow to reduce manual steps and errors.',
-        5: 'A training-management system for 3 roles (Admin, Lecturer, Student), standardizing the flow from opening classes and enrollment to grade management — designed with OOAD/UML.',
+        5: 'A cross-platform (Mobile + Web) app for tracking nutrition and exercise, combining a conversational AI health assistant, a machine-learning model that predicts calories burned (R² 0.99) and Google Fit data sync.',
       },
     },
     contact: {

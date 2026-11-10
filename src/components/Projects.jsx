@@ -50,12 +50,12 @@ const projectList = [
   },
   {
     id: 5,
-    title: "Course Management System",
-    category: "System Design & OOAD",
-    desc: "Hệ thống quản lý giáo dục toàn diện hỗ trợ đa luồng người dùng (Quản trị viên, Giảng viên, Sinh viên).",
-    tech: ["OOAD", "UML", "Relational Database"],
-    github: "https://github.com/TrucNguyen1410/course-management-system",
-    images: ["5.1.png", "5.6.png", "5.7.png", "5.8.png", "5.9.png", "5.10.png", "5.11.png", "5.12.png"]
+    title: "HealthAI — Calories Prediction App",
+    category: "Mobile & Web + AI",
+    desc: "Ứng dụng đa nền tảng (Mobile + Web) theo dõi dinh dưỡng và vận động, tích hợp trợ lý AI hội thoại, mô hình học máy dự đoán calo tiêu hao (R² 0.99) và đồng bộ dữ liệu từ Google Fit.",
+    tech: ["Flutter", "Node.js", "MongoDB", "Python", "scikit-learn", "Groq LLM", "Google Fit API"],
+    github: "https://github.com/TrucNguyen1410/calories-prediction-app",
+    images: ["calories-cover.png", "calories-s1.png", "calories-s2.png", "calories-s3.png", "calories-s4.png", "calories-s5.png", "calories-s6.png"]
   }
 ];
 
